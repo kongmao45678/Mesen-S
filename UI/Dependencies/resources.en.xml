@@ -2,14 +2,14 @@
 <Resources>
 	<Forms>
 		<Form ID="frmMain" Title="Mesen-S">
-			<Control ID="mnuFile">File</Control>
-			<Control ID="mnuOpen">Open</Control>
+			<Control ID="mnuFile">文件</Control>
+			<Control ID="mnuOpen">打开</Control>
 			<Control ID="mnuReloadRom">Reload ROM</Control>
 			<Control ID="mnuSaveState">Save State</Control>
 			<Control ID="mnuLoadState">Load State</Control>
 			<Control ID="mnuLoadLastSession">Load Last Session</Control>
 			<Control ID="mnuRecentFiles">Recent Files</Control>
-			<Control ID="mnuExit">Exit</Control>
+			<Control ID="mnuExit">退出</Control>
 			<Control ID="mnuGame">Game</Control>
 			<Control ID="mnuPause">Pause</Control>
 			<Control ID="mnuReset">Reset</Control>
