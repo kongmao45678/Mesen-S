@@ -4,653 +4,653 @@
 		<Form ID="frmMain" Title="Mesen-S">
 			<Control ID="mnuFile">文件</Control>
 			<Control ID="mnuOpen">打开</Control>
-			<Control ID="mnuReloadRom">Reload ROM</Control>
-			<Control ID="mnuSaveState">Save State</Control>
-			<Control ID="mnuLoadState">Load State</Control>
-			<Control ID="mnuLoadLastSession">Load Last Session</Control>
-			<Control ID="mnuRecentFiles">Recent Files</Control>
-			<Control ID="mnuExit">退出</Control>
-			<Control ID="mnuGame">Game</Control>
-			<Control ID="mnuPause">Pause</Control>
-			<Control ID="mnuReset">Reset</Control>
-			<Control ID="mnuPowerCycle">Power Cycle</Control>
-			<Control ID="mnuPowerOff">Power Off</Control>
-			<Control ID="mnuSwitchDiskSide">Switch Disk Side</Control>
-			<Control ID="mnuSelectDisk">Select Disk</Control>
-			<Control ID="mnuEjectDisk">Eject Disk</Control>
-			<Control ID="mnuGameConfig">Game Configuration</Control>
-			<Control ID="mnuOptions">Options</Control>
-			<Control ID="mnuEmulationSpeed">Speed</Control>
-			<Control ID="mnuEmuSpeedNormal">Normal (100%)</Control>
-			<Control ID="mnuIncreaseSpeed">Increase Speed</Control>
-			<Control ID="mnuDecreaseSpeed">Decrease Speed</Control>
-			<Control ID="mnuEmuSpeedMaximumSpeed">Maximum Speed</Control>
-			<Control ID="mnuEmuSpeedTriple">Triple (300%)</Control>
-			<Control ID="mnuEmuSpeedDouble">Double (200%)</Control>
-			<Control ID="mnuEmuSpeedHalf">Half (50%)</Control>
-			<Control ID="mnuEmuSpeedQuarter">Quarter (25%)</Control>
-			<Control ID="mnuShowFPS">Show FPS</Control>
-			<Control ID="mnuVideoScale">Video Size</Control>
+			<Control ID="mnuReloadRom">重装ROM</Control>
+			<Control ID="mnuSaveState">保存状态</Control>
+			<Control ID="mnuLoadState">负载状态</Control>
+			<Control ID="mnuLoadLastSession">加载上次会话</Control>
+			<Control ID="mnuRecentFiles">最近的文件</Control>
+			<Control ID="mnuExit">出口</Control>
+			<Control ID="mnuGame">游戏</Control>
+			<Control ID="mnuPause">暂停</Control>
+			<Control ID="mnuReset">重启</Control>
+			<Control ID="mnuPowerCycle">电源周期</Control>
+			<Control ID="mnuPowerOff">关机</Control>
+			<Control ID="mnuSwitchDiskSide">切换磁盘端</Control>
+			<Control ID="mnuSelectDisk">选择磁盘</Control>
+			<Control ID="mnuEjectDisk">弹出磁盘</Control>
+			<Control ID="mnuGameConfig">游戏配置</Control>
+			<Control ID="mnuOptions">选项</Control>
+			<Control ID="mnuEmulationSpeed">速度</Control>
+			<Control ID="mnuEmuSpeedNormal">正常 (100%)</Control>
+			<Control ID="mnuIncreaseSpeed">增速</Control>
+			<Control ID="mnuDecreaseSpeed">降低速度</Control>
+			<Control ID="mnuEmuSpeedMaximumSpeed">最大速度</Control>
+			<Control ID="mnuEmuSpeedTriple">三人 (300%)</Control>
+			<Control ID="mnuEmuSpeedDouble">双倍 (200%)</Control>
+			<Control ID="mnuEmuSpeedHalf">一半 (50%)</Control>
+			<Control ID="mnuEmuSpeedQuarter">季度 (25%)</Control>
+			<Control ID="mnuShowFPS">显示 FPS</Control>
+			<Control ID="mnuVideoScale">视频大小</Control>
 			<Control ID="mnuScale1x">1x</Control>
-			<Control ID="mnuScale2x">2x</Control>
-			<Control ID="mnuScale3x">3x</Control>
-			<Control ID="mnuScale4x">4x</Control>
-			<Control ID="mnuScale5x">5x</Control>
-			<Control ID="mnuScale6x">6x</Control>
-			<Control ID="mnuFullscreen">Fullscreen</Control>
-			<Control ID="mnuVideoFilter">Video Filter</Control>
-			<Control ID="mnuNoneFilter">None</Control>
-			<Control ID="mnuNtscFilter">NTSC 2x (blargg)</Control>
-			<Control ID="mnuBilinearInterpolation">Use Bilinear Interpolation</Control>
-			<Control ID="mnuBlendHighResolutionModes">Blend High Resolution Modes</Control>
-			<Control ID="mnuAudioConfig">Audio</Control>
-			<Control ID="mnuInput">Input</Control>
-			<Control ID="mnuRegion">Region</Control>
-			<Control ID="mnuRegionAuto">Auto</Control>
+			<Control ID="mnuScale2x">2倍</Control>
+			<Control ID="mnuScale3x">3倍</Control>
+			<Control ID="mnuScale4x">4倍</Control>
+			<Control ID="mnuScale5x">5倍</Control>
+			<Control ID="mnuScale6x">6倍</Control>
+			<Control ID="mnuFullscreen">全屏</Control>
+			<Control ID="mnuVideoFilter">视频过滤器</Control>
+			<Control ID="mnuNoneFilter">没有任何</Control>
+			<Control ID="mnuNtscFilter">NTSC 2x（布拉格）</Control>
+			<Control ID="mnuBilinearInterpolation">使用双线性插值</Control>
+			<Control ID="mnuBlendHighResolutionModes">混合高分辨率模式</Control>
+			<Control ID="mnuAudioConfig">声音的</Control>
+			<Control ID="mnuInput">输入</Control>
+			<Control ID="mnuRegion">地区</Control>
+			<Control ID="mnuRegionAuto">自动</Control>
 			<Control ID="mnuRegionNtsc">NTSC</Control>
 			<Control ID="mnuRegionPal">PAL</Control>
-			<Control ID="mnuRegionDendy">Dendy</Control>
-			<Control ID="mnuVideoConfig">Video</Control>
-			<Control ID="mnuEmulationConfig">Emulation</Control>
-			<Control ID="mnuPreferences">Preferences</Control>
-			<Control ID="mnuTools">Tools</Control>
-			<Control ID="mnuHistoryViewer">History Viewer</Control>
-			<Control ID="mnuNetPlay">Net Play</Control>
-			<Control ID="mnuStartServer">Start Server</Control>
-			<Control ID="mnuConnect">Connect to Server</Control>
-			<Control ID="mnuNetPlaySelectController">Select Controller</Control>
-			<Control ID="mnuNetPlayPlayer1">Player 1</Control>
-			<Control ID="mnuNetPlayPlayer2">Player 2</Control>
-			<Control ID="mnuNetPlayPlayer3">Player 3</Control>
-			<Control ID="mnuNetPlayPlayer4">Player 4</Control>
-			<Control ID="mnuNetPlayPlayer5">Player 5</Control>
-			<Control ID="mnuNetPlaySpectator">Spectator</Control>
-			<Control ID="mnuProfile">Configure Profile</Control>
-			<Control ID="mnuMovies">Movies</Control>
-			<Control ID="mnuPlayMovie">Play...</Control>
-			<Control ID="mnuRecordMovie">Record...</Control>
-			<Control ID="mnuStopMovie">Stop</Control>
-			<Control ID="mnuSoundRecorder">Sound Recorder</Control>
-			<Control ID="mnuWaveRecord">Record...</Control>
-			<Control ID="mnuWaveStop">Stop Recording</Control>
-			<Control ID="mnuVideoRecorder">Video Recorder</Control>
-			<Control ID="mnuAviRecord">Record...</Control>
-			<Control ID="mnuAviStop">Stop Recording</Control>
-			<Control ID="mnuCheats">Cheats</Control>
-			<Control ID="mnuTests">Tests</Control>
-			<Control ID="mnuTestRun">Run...</Control>
-			<Control ID="mnuTestRecordFrom">Record from...</Control>
-			<Control ID="mnuTestRecordStart">Start</Control>
-			<Control ID="mnuTestRecordNow">Now</Control>
-			<Control ID="mnuTestRecordMovie">Movie</Control>
-			<Control ID="mnuTestRecordTest">Test</Control>
-			<Control ID="mnuTestStopRecording">Stop recording</Control>
-			<Control ID="mnuRunAllTests">Run all tests</Control>
-			<Control ID="mnuDebugger">Debugger</Control>
-			<Control ID="mnuLogWindow">Log Window</Control>
-			<Control ID="mnuInstallHdPack">Install HD Pack</Control>
-			<Control ID="mnuHdPackEditor">HD Pack Builder</Control>
-			<Control ID="mnuRandomGame">Load Random Game</Control>
-			<Control ID="mnuTakeScreenshot">Take Screenshot</Control>
-			<Control ID="mnuHelp">Help</Control>
-			<Control ID="mnuOnlineHelp">Online Help</Control>
-			<Control ID="mnuCheckForUpdates">Check for updates</Control>
-			<Control ID="mnuReportBug">Report a bug</Control>
-			<Control ID="mnuHelpWindow">Command-line options</Control>
-			<Control ID="mnuAbout">About</Control>
+			<Control ID="mnuRegionDendy">丹迪</Control>
+			<Control ID="mnuVideoConfig">视频</Control>
+			<Control ID="mnuEmulationConfig">仿真</Control>
+			<Control ID="mnuPreferences">喜好</Control>
+			<Control ID="mnuTools">工具</Control>
+			<Control ID="mnuHistoryViewer">历史查看器</Control>
+			<Control ID="mnuNetPlay">网络游戏</Control>
+			<Control ID="mnuStartServer">启动服务器</Control>
+			<Control ID="mnuConnect">连接到服务器</Control>
+			<Control ID="mnuNetPlaySelectController">选择控制器</Control>
+			<Control ID="mnuNetPlayPlayer1">玩家 1</Control>
+			<Control ID="mnuNetPlayPlayer2">玩家 2</Control>
+			<Control ID="mnuNetPlayPlayer3">玩家 3</Control>
+			<Control ID="mnuNetPlayPlayer4">玩家 4</Control>
+			<Control ID="mnuNetPlayPlayer5">玩家 5</Control>
+			<Control ID="mnuNetPlaySpectator">观众</Control>
+			<Control ID="mnuProfile">配置配置文件</Control>
+			<Control ID="mnuMovies">电影</Control>
+			<Control ID="mnuPlayMovie">玩...</Control>
+			<Control ID="mnuRecordMovie">记录...</Control>
+			<Control ID="mnuStopMovie">停止</Control>
+			<Control ID="mnuSoundRecorder">录音机</Control>
+			<Control ID="mnuWaveRecord">记录...</Control>
+			<Control ID="mnuWaveStop">停止录音</Control>
+			<Control ID="mnuVideoRecorder">录像机</Control>
+			<Control ID="mnuAviRecord">记录...</Control>
+			<Control ID="mnuAviStop">停止录音</Control>
+			<Control ID="mnuCheats">秘籍</Control>
+			<Control ID="mnuTests">测试</Control>
+			<Control ID="mnuTestRun">跑...</Control>
+			<Control ID="mnuTestRecordFrom">记录自...</Control>
+			<Control ID="mnuTestRecordStart">开始</Control>
+			<Control ID="mnuTestRecordNow">现在</Control>
+			<Control ID="mnuTestRecordMovie">电影</Control>
+			<Control ID="mnuTestRecordTest">测试</Control>
+			<Control ID="mnuTestStopRecording">停止录音</Control>
+			<Control ID="mnuRunAllTests">运行所有测试</Control>
+			<Control ID="mnuDebugger">调试器</Control>
+			<Control ID="mnuLogWindow">日志窗口</Control>
+			<Control ID="mnuInstallHdPack">安装高清包</Control>
+			<Control ID="mnuHdPackEditor">高清包生成器</Control>
+			<Control ID="mnuRandomGame">加载随机游戏</Control>
+			<Control ID="mnuTakeScreenshot">截屏</Control>
+			<Control ID="mnuHelp">帮助</Control>
+			<Control ID="mnuOnlineHelp">网上帮助</Control>
+			<Control ID="mnuCheckForUpdates">检查更新</Control>
+			<Control ID="mnuReportBug">报告错误</Control>
+			<Control ID="mnuHelpWindow">命令行选项</Control>
+			<Control ID="mnuAbout">关于</Control>
 
-			<!-- Archive Load Message -->
-			<Control ID="lblExtractingFile">Extracting file, please wait...</Control>
 
-			<!-- NSF Player -->
-			<Control ID="lblTitle">Title:</Control>
-			<Control ID="lblArtist">Artist:</Control>
-			<Control ID="lblCopyright">Copyright:</Control>
-			<Control ID="lblSoundChips">Sound Chips:</Control>
-			<Control ID="lblRecording">REC</Control>
-			<Control ID="lblSlowMotion">Slow Motion</Control>
-			<Control ID="lblRewinding">Rewinding</Control>
-			<Control ID="lblFastForward">Fast Forward</Control>
-		</Form>
-		<Form ID="frmLogWindow" Title="Log Window">
-			<Control ID="btnClose">Close</Control>
-		</Form>
-		<Form ID="frmAudioConfig" Title="Audio Options">
-			<Control ID="tpgGeneral">General</Control>
-			<Control ID="tpgAdvanced">Advanced</Control>
-			<Control ID="chkDisableDynamicSampleRate">Disable dynamic sample rate</Control>
-			<Control ID="chkMuteSoundInBackground">Mute sound when in background</Control>
-			<Control ID="chkReduceSoundInBackground">Reduce volume when in background</Control>
-			<Control ID="chkReduceSoundInFastForward">Reduce volume during fast forward/rewind</Control>
-			<Control ID="trkVolumeReduction">Volume Reduction (%)</Control>
-			<Control ID="lblVolumeReductionSettings">Volume Reduction Settings</Control>
-			<Control ID="chkEnableAudio">Enable Audio</Control>
-			<Control ID="chkEnableCubicInterpolation">Enable cubic interpolation</Control>
-			<Control ID="lblSampleRate">Sample Rate:</Control>
-			<Control ID="lblLatencyMs">ms</Control>
-			<Control ID="lblLatencyWarning">Low values may cause sound problems</Control>
-			<Control ID="lblAudioLatency">Latency:</Control>
-			<Control ID="lblAudioDevice">Device:</Control>
-			<Control ID="tpgVolume">Volume</Control>
-			<Control ID="grpVolume">Volume</Control>
-			<Control ID="btnReset">Reset to Defaults</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
+			<Control ID="lblExtractingFile">正在提取文件，请稍候...</Control>
 
-			<Control ID="tpgEqualizer">Equalizer</Control>
-			<Control ID="chkEnableEqualizer">Enable Equalizer</Control>
-		</Form>
-		<Form ID="frmInputConfig" Title="Input Settings">
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-			<Control ID="tpgControllers">Controllers</Control>
-			<Control ID="btnSetupExp">Setup</Control>
-			<Control ID="btnSetupCartridge">Setup</Control>
-			<Control ID="lblCartridge">Cartridge:</Control>
-			<Control ID="lblPlayer1">Player 1:</Control>
-			<Control ID="lblPlayer2">Player 2:</Control>
-			<Control ID="lblMultitap1">Player 2:</Control>
-			<Control ID="lblMultitap2">Player 3:</Control>
-			<Control ID="lblMultitap3">Player 4:</Control>
-			<Control ID="lblMultitap4">Player 5:</Control>
-			<Control ID="btnSetupP1">Setup</Control>
-			<Control ID="btnSetupP2">Setup</Control>
-			<Control ID="grpMultitap">Multitap Configuration</Control>
-			<Control ID="btnSetupMultitap1">Setup</Control>
-			<Control ID="btnSetupMultitap2">Setup</Control>
-			<Control ID="btnSetupMultitap3">Setup</Control>
-			<Control ID="btnSetupMultitap4">Setup</Control>
-			<Control ID="lblNesType">Console Type:</Control>
-			<Control ID="lblExpansionPort">Expansion Port:</Control>
-			<Control ID="chkFourScore">Use Four Score accessory</Control>
-			<Control ID="chkAutoConfigureInput">Automatically configure controllers when loading a game</Control>
 
-			<Control ID="tpgAdvanced">Advanced</Control>
-			<Control ID="grpDisplayInput">Display Controller Input</Control>
-			<Control ID="chkDisplayPort1">Port 1</Control>
-			<Control ID="chkDisplayPort2">Port 2</Control>
-			<Control ID="chkDisplayPort3">Port 3</Control>
-			<Control ID="chkDisplayPort4">Port 4</Control>
-			<Control ID="lblDisplayPosition">Display Position:</Control>
-			<Control ID="chkDisplayInputHorizontally">Display horizontally</Control>
+			<Control ID="lblTitle">标题：</Control>
+			<Control ID="lblArtist">艺术家：</Control>
+			<Control ID="lblCopyright">版权：</Control>
+			<Control ID="lblSoundChips">声音芯片：</Control>
+			<Control ID="lblRecording">可再生能源</Control>
+			<Control ID="lblSlowMotion">慢动作</Control>
+			<Control ID="lblRewinding">倒带</Control>
+			<Control ID="lblFastForward">快进</Control>
+		</Form>	
+		<Form ID="frmLogWindow" Title="Log Window">	
+			<Control ID="btnClose">关闭</Control>
+		</Form>	
+		<Form ID="frmAudioConfig" Title="Audio Options">	
+			<Control ID="tpgGeneral">一般的</Control>
+			<Control ID="tpgAdvanced">先进的</Control>
+			<Control ID="chkDisableDynamicSampleRate">禁用动态采样率</Control>
+			<Control ID="chkMuteSoundInBackground">在后台静音</Control>
+			<Control ID="chkReduceSoundInBackground">在后台时降低音量</Control>
+			<Control ID="chkReduceSoundInFastForward">快进/快退时降低音量</Control>
+			<Control ID="trkVolumeReduction">体积减少 (%)</Control>
+			<Control ID="lblVolumeReductionSettings">音量减小设置</Control>
+			<Control ID="chkEnableAudio">启用音频</Control>
+			<Control ID="chkEnableCubicInterpolation">启用三次插值</Control>
+			<Control ID="lblSampleRate">采样率：</Control>
+			<Control ID="lblLatencyMs">多发性硬化症</Control>
+			<Control ID="lblLatencyWarning">低值可能会导致声音问题</Control>
+			<Control ID="lblAudioLatency">潜伏：</Control>
+			<Control ID="lblAudioDevice">设备：</Control>
+			<Control ID="tpgVolume">体积</Control>
+			<Control ID="grpVolume">体积</Control>
+			<Control ID="btnReset">重置为默认值</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
 
-			<Control ID="lblSmall">Small</Control>
-			<Control ID="lblLarge">Large</Control>
-			<Control ID="lblDeadzone">Controller axis deadzone size:</Control>
+			<Control ID="tpgEqualizer">均衡器</Control>
+			<Control ID="chkEnableEqualizer">启用均衡器</Control>
+		</Form>	
+		<Form ID="frmInputConfig" Title="Input Settings">	
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+			<Control ID="tpgControllers">控制器</Control>
+			<Control ID="btnSetupExp">设置</Control>
+			<Control ID="btnSetupCartridge">设置</Control>
+			<Control ID="lblCartridge">墨盒：</Control>
+			<Control ID="lblPlayer1">玩家 1：</Control>
+			<Control ID="lblPlayer2">玩家2：</Control>
+			<Control ID="lblMultitap1">玩家2：</Control>
+			<Control ID="lblMultitap2">玩家3：</Control>
+			<Control ID="lblMultitap3">玩家4：</Control>
+			<Control ID="lblMultitap4">玩家5：</Control>
+			<Control ID="btnSetupP1">设置</Control>
+			<Control ID="btnSetupP2">设置</Control>
+			<Control ID="grpMultitap">多抽头配置</Control>
+			<Control ID="btnSetupMultitap1">设置</Control>
+			<Control ID="btnSetupMultitap2">设置</Control>
+			<Control ID="btnSetupMultitap3">设置</Control>
+			<Control ID="btnSetupMultitap4">设置</Control>
+			<Control ID="lblNesType">控制台类型：</Control>
+			<Control ID="lblExpansionPort">扩展端口：</Control>
+			<Control ID="chkFourScore">使用四分配件</Control>
+			<Control ID="chkAutoConfigureInput">加载游戏时自动配置控制器</Control>
 
-			<Control ID="chkHideMousePointerForZapper">Hide mouse pointer when using zapper</Control>
+			<Control ID="tpgAdvanced">先进的</Control>
+			<Control ID="grpDisplayInput">显示控制器输入</Control>
+			<Control ID="chkDisplayPort1">端口 1</Control>
+			<Control ID="chkDisplayPort2">端口 2</Control>
+			<Control ID="chkDisplayPort3">端口 3</Control>
+			<Control ID="chkDisplayPort4">端口 4</Control>
+			<Control ID="lblDisplayPosition">展示位置：</Control>
+			<Control ID="chkDisplayInputHorizontally">水平显示</Control>
 
-			<Control ID="lblKeyBinding">Warning: Your current configuration contains conflicting key bindings - some physical buttons on your keyboard or gamepad are mapped to multiple buttons on the NES controller. If this is not intentional, please review and correct your key bindings.</Control>
-		</Form>
-		<Form ID="frmVideoConfig" Title="Video Options">
-			<Control ID="tpgGeneral">General</Control>
-			<Control ID="lblVideoScale">Scale:</Control>
-			<Control ID="lblVideoFilter">Filter:</Control>
-			<Control ID="chkIntegerFpsMode">Enable integer FPS mode (e.g: run at 60 fps instead of 60.1)</Control>
-			<Control ID="chkVerticalSync">Enable vertical sync</Control>
-			<Control ID="lblDisplayRatio">Aspect Ratio:</Control>
-			<Control ID="lblCustomRatio">Custom Ratio: </Control>
-			<Control ID="chkBilinearInterpolation">Use bilinear interpolation when scaling</Control>
-			<Control ID="chkBlendHighResolutionModes">Blend high resolution modes</Control>
-			<Control ID="chkFullscreenForceIntegerScale">Use integer scale values when entering fullscreen mode</Control>
-			<Control ID="chkShowFps">Show FPS</Control>
-			<Control ID="chkUseHdPacks">Use HDNes HD packs</Control>
-			<Control ID="chkUseExclusiveFullscreen">Use exclusive fullscreen mode</Control>
-			<Control ID="lblRequestedRefreshRate">Requested Refresh Rate:</Control>
-			<Control ID="tpgOverscan">Overscan</Control>
-			<Control ID="tpgOverscanGlobal">Global</Control>
-			<Control ID="tpgOverscanGameSpecific">Game-Specific</Control>
-			<Control ID="chkEnableGameSpecificOverscan">Enable game-specific overscan settings</Control>
-			<Control ID="lblLeft">Left</Control>
-			<Control ID="lblTop">Top</Control>
-			<Control ID="lblBottom">Bottom</Control>
-			<Control ID="lblRight">Right</Control>
-			<Control ID="tpgPalette">Palette</Control>
-			<Control ID="chkShowColorIndexes">Show color indexes</Control>
-			<Control ID="mnuDefaultPalette">Default (NTSC)</Control>
-			<Control ID="btnSelectPalette">Load Preset Palette...</Control>
-			<Control ID="btnExportPalette">Export Palette</Control>
-			<Control ID="btnLoadPalFile">Load Palette File</Control>
-			<Control ID="chkUseCustomVsPalette">Use this palette for VS System games</Control>
-			<Control ID="tpgPicture">Picture</Control>
-			<Control ID="btnSelectPreset">Select Preset...</Control>
-			<Control ID="grpCommon">Common Settings</Control>
-			<Control ID="trkBrightness">Brightness</Control>
-			<Control ID="trkContrast">Contrast</Control>
-			<Control ID="trkHue">Hue</Control>
-			<Control ID="trkSaturation">Saturation</Control>
-			<Control ID="grpNtscFilter">NTSC Filter</Control>
-			<Control ID="trkArtifacts">Artifacts</Control>
-			<Control ID="trkBleed">Bleed</Control>
-			<Control ID="trkFringing">Fringing</Control>
-			<Control ID="trkGamma">Gamma</Control>
-			<Control ID="trkResolution">Resolution</Control>
-			<Control ID="trkSharpness">Sharpness</Control>
-			<Control ID="chkMergeFields">Merge Fields</Control>
-			<Control ID="chkVerticalBlend">Apply Vertical Blending</Control>
+			<Control ID="lblSmall">小的</Control>
+			<Control ID="lblLarge">大的</Control>
+			<Control ID="lblDeadzone">控制器轴死区大小：</Control>
 
-			<Control ID="trkYFilterLength">Y Filter (Horizontal Blur)</Control>
-			<Control ID="trkIFilterLength">I Filter (Horizontal Bleed)</Control>
-			<Control ID="trkQFilterLength">Q Filter (Horizontal Bleed)</Control>
+			<Control ID="chkHideMousePointerForZapper">使用 zapper 时隐藏鼠标指针</Control>
 
-			<Control ID="grpScanlines">Scanlines</Control>
-			<Control ID="trkScanlines">Scanlines</Control>
-			<Control ID="btnResetPictureSettings">Reset</Control>
-			<Control ID="mnuPresetComposite">Composite</Control>
-			<Control ID="mnuPresetSVideo">S-Video</Control>
+			<Control ID="lblKeyBinding">警告：您当前的配置包含冲突的键绑定 - 键盘或游戏手柄上的某些物理按钮映射到 NES 控制器上的多个按钮。如果这不是故意的，请检查并更正您的键绑定。</Control>
+		</Form>	
+		<Form ID="frmVideoConfig" Title="Video Options">	
+			<Control ID="tpgGeneral">一般的</Control>
+			<Control ID="lblVideoScale">规模：</Control>
+			<Control ID="lblVideoFilter">筛选：</Control>
+			<Control ID="chkIntegerFpsMode">启用整数 FPS 模式（例如：以 60 fps 而不是 60.1 的速度运行）</Control>
+			<Control ID="chkVerticalSync">启用垂直同步</Control>
+			<Control ID="lblDisplayRatio">纵横比：</Control>
+			<Control ID="lblCustomRatio">自定义比例：</Control>
+			<Control ID="chkBilinearInterpolation">缩放时使用双线性插值</Control>
+			<Control ID="chkBlendHighResolutionModes">混合高分辨率模式</Control>
+			<Control ID="chkFullscreenForceIntegerScale">进入全屏模式时使用整数比例值</Control>
+			<Control ID="chkShowFps">显示 FPS</Control>
+			<Control ID="chkUseHdPacks">使用 HDNes 高清包</Control>
+			<Control ID="chkUseExclusiveFullscreen">使用独占全屏模式</Control>
+			<Control ID="lblRequestedRefreshRate">请求的刷新率：</Control>
+			<Control ID="tpgOverscan">过扫描</Control>
+			<Control ID="tpgOverscanGlobal">全球的</Control>
+			<Control ID="tpgOverscanGameSpecific">特定游戏</Control>
+			<Control ID="chkEnableGameSpecificOverscan">启用游戏特定的过扫描设置</Control>
+			<Control ID="lblLeft">剩下</Control>
+			<Control ID="lblTop">最佳</Control>
+			<Control ID="lblBottom">底部</Control>
+			<Control ID="lblRight">对</Control>
+			<Control ID="tpgPalette">调色板</Control>
+			<Control ID="chkShowColorIndexes">显示颜色索引</Control>
+			<Control ID="mnuDefaultPalette">默认 (NTSC)</Control>
+			<Control ID="btnSelectPalette">加载预设调色板...</Control>
+			<Control ID="btnExportPalette">导出调色板</Control>
+			<Control ID="btnLoadPalFile">加载调色板文件</Control>
+			<Control ID="chkUseCustomVsPalette">将此调色板用于 VS 系统游戏</Control>
+			<Control ID="tpgPicture">图片</Control>
+			<Control ID="btnSelectPreset">选择预设...</Control>
+			<Control ID="grpCommon">常用设置</Control>
+			<Control ID="trkBrightness">亮度</Control>
+			<Control ID="trkContrast">对比</Control>
+			<Control ID="trkHue">色调</Control>
+			<Control ID="trkSaturation">饱和</Control>
+			<Control ID="grpNtscFilter">NTSC 过滤器</Control>
+			<Control ID="trkArtifacts">文物</Control>
+			<Control ID="trkBleed">流血</Control>
+			<Control ID="trkFringing">边缘</Control>
+			<Control ID="trkGamma">伽玛</Control>
+			<Control ID="trkResolution">解析度</Control>
+			<Control ID="trkSharpness">锐度</Control>
+			<Control ID="chkMergeFields">合并字段</Control>
+			<Control ID="chkVerticalBlend">应用垂直混合</Control>
+
+			<Control ID="trkYFilterLength">Y 滤镜（水平模糊）</Control>
+			<Control ID="trkIFilterLength">I 过滤器（水平出血）</Control>
+			<Control ID="trkQFilterLength">Q 过滤器（水平出血）</Control>
+
+			<Control ID="grpScanlines">扫描线</Control>
+			<Control ID="trkScanlines">扫描线</Control>
+			<Control ID="btnResetPictureSettings">重启</Control>
+			<Control ID="mnuPresetComposite">合成的</Control>
+			<Control ID="mnuPresetSVideo">S-视频</Control>
 			<Control ID="mnuPresetRgb">RGB</Control>
-			<Control ID="mnuPresetMonochrome">Monochrome</Control>
+			<Control ID="mnuPresetMonochrome">单色</Control>
 
-			<Control ID="tpgAdvanced">Advanced</Control>
-			<Control ID="lblScreenRotation">Screen Rotation:</Control>
-			<Control ID="chkRemoveSpriteLimit">Remove sprite limit (Reduces flashing)</Control>
-			<Control ID="chkAdaptiveSpriteLimit">Automatically re-enable sprite limit as needed to prevent graphical glitches when possible</Control>
-			
-			<Control ID="chkHideBgLayer0">Hide background layer 0</Control>
-			<Control ID="chkHideBgLayer1">Hide background layer 1</Control>
-			<Control ID="chkHideBgLayer2">Hide background layer 2</Control>
-			<Control ID="chkHideBgLayer3">Hide background layer 3</Control>
-			<Control ID="chkHideSprites">Hide sprites</Control>
-			<Control ID="chkDisableFrameSkipping">Disable frame skipping when fast forwarding</Control>
+			<Control ID="tpgAdvanced">先进的</Control>
+			<Control ID="lblScreenRotation">屏幕旋转：</Control>
+			<Control ID="chkRemoveSpriteLimit">删除精灵限制（减少闪烁）</Control>
+			<Control ID="chkAdaptiveSpriteLimit">根据需要自动重新启用精灵限制以在可能的情况下防止图形故障</Control>
 
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmEmulationConfig" Title="Emulation Settings">
-			<Control ID="tpgGeneral">General</Control>
-			<Control ID="lblEmuSpeedHint">%  (0 = Maximum speed)</Control>
-			<Control ID="lblEmulationSpeed">Emulation Speed:</Control>
-			<Control ID="lblTurboSpeedHint">%  (0 = Maximum speed)</Control>
-			<Control ID="lblTurboSpeed">Fast Forward Speed:</Control>
-			<Control ID="lblRewindSpeedHint">%  (0 = Maximum speed)</Control>
-			<Control ID="lblRewindSpeed">Rewind Speed:</Control>
-			<Control ID="lblRunAhead">Run Ahead:</Control>
-			<Control ID="lblRunAheadFrames">frames (reduces input lag, increases CPU usage)</Control>
-			
-			<Control ID="tpgAdvanced">Advanced</Control>
-			<Control ID="lblDeveloperSettings">Recommended settings for developers (homebrew / ROM hacking)</Control>
-			<Control ID="lblMiscSettings">Miscellaneous Settings</Control>
-			<Control ID="chkAllowInvalidInput">Allow invalid input (e.g Down + Up or Left + Right at the same time)</Control>
-			<Control ID="chkMapperRandomPowerOnState">Randomize power-on state for mappers</Control>
+			<Control ID="chkHideBgLayer0">隐藏背景层 0</Control>
+			<Control ID="chkHideBgLayer1">隐藏背景层 1</Control>
+			<Control ID="chkHideBgLayer2">隐藏背景层 2</Control>
+			<Control ID="chkHideBgLayer3">隐藏背景层 3</Control>
+			<Control ID="chkHideSprites">隐藏精灵</Control>
+			<Control ID="chkDisableFrameSkipping">快进时禁用跳帧</Control>
 
-			<Control ID="lblRamPowerOnState">Default power on state for RAM:</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmEmulationConfig" Title="Emulation Settings">	
+			<Control ID="tpgGeneral">一般的</Control>
+			<Control ID="lblEmuSpeedHint">%（0 = 最大速度）</Control>
+			<Control ID="lblEmulationSpeed">仿真速度：</Control>
+			<Control ID="lblTurboSpeedHint">%（0 = 最大速度）</Control>
+			<Control ID="lblTurboSpeed">快进速度：</Control>
+			<Control ID="lblRewindSpeedHint">%（0 = 最大速度）</Control>
+			<Control ID="lblRewindSpeed">倒带速度：</Control>
+			<Control ID="lblRunAhead">提前运行：</Control>
+			<Control ID="lblRunAheadFrames">帧（减少输入延迟，增加 CPU 使用率）</Control>
 
-			<Control ID="tpgOverclocking">Overclocking</Control>
-			<Control ID="grpOverclocking">Overclocking</Control>
-			<Control ID="lblOverclockHint">Overclocking can help reduce or remove slowdowns in games (but it can also cause issues). To overclock, try setting the "before NMI" value to a few hundred lines (e.g 300+). If this breaks the game, try lowering the value or using the "after NMI" field instead.</Control>
-			<Control ID="lblClockRate">Clock Rate Multiplier:</Control>
-			<Control ID="lblClockRatePercent">% (Default: 100%)</Control>
+			<Control ID="tpgAdvanced">先进的</Control>
+			<Control ID="lblDeveloperSettings">开发人员的推荐设置（自制软件/ROM 黑客）</Control>
+			<Control ID="lblMiscSettings">杂项设置</Control>
+			<Control ID="chkAllowInvalidInput">允许无效输入（例如同时向下 + 向上或向左 + 右）</Control>
+			<Control ID="chkMapperRandomPowerOnState">随机化映射器的开机状态</Control>
 
-			<Control ID="grpPpuTiming">PPU Vertical Blank Configuration</Control>
-			<Control ID="lblExtraScanlinesBeforeNmi">Additional scanlines before NMI:</Control>
-			<Control ID="lblExtraScanlinesAfterNmi">Additional scanlines after NMI:</Control>
-			<Control ID="lblEffectiveClockRate">Effective Clock Rate (NTSC):</Control>
-			<Control ID="lblEffectiveClockRatePal">Effective Clock Rate (PAL):</Control>
-			<Control ID="lblEffectiveClockRateDendy">Effective Clock Rate (Dendy):</Control>
+			<Control ID="lblRamPowerOnState">RAM 的默认开机状态：</Control>
 
-			<Control ID="chkOverclockAdjustApu">Do not overclock APU (prevents sound pitch changes caused by overclocking)</Control>
+			<Control ID="tpgOverclocking">超频</Control>
+			<Control ID="grpOverclocking">超频</Control>
+			<Control ID="lblOverclockHint">超频可以帮助减少或消除游戏中的减速（但它也可能导致问题）。要超频，请尝试将“before NMI”值设置为几百行（例如 300+）。如果这会破坏游戏，请尝试降低该值或使用“after NMI”字段。</Control>
+			<Control ID="lblClockRate">时钟速率乘数：</Control>
+			<Control ID="lblClockRatePercent">%（默认值：100%）</Control>
 
-			<Control ID="chkShowLagCounter">Show Lag Counter</Control>
-			<Control ID="btnResetLagCounter">Reset Counter</Control>
+			<Control ID="grpPpuTiming">PPU垂直空白配置</Control>
+			<Control ID="lblExtraScanlinesBeforeNmi">NMI 之前的附加扫描线：</Control>
+			<Control ID="lblExtraScanlinesAfterNmi">NMI 后的附加扫描线：</Control>
+			<Control ID="lblEffectiveClockRate">有效时钟速率 (NTSC)：</Control>
+			<Control ID="lblEffectiveClockRatePal">有效时钟速率 (PAL)：</Control>
+			<Control ID="lblEffectiveClockRateDendy">有效时钟频率（Dendy）：</Control>
 
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmGameboyConfig" Title="Game Boy Config">
-			<Control ID="tpgGeneral">General</Control>
-			<Control ID="lblModel">Model</Control>
-			<Control ID="chkUseSgb2">Use Super Game Boy 2 timings and behavior</Control>
+			<Control ID="chkOverclockAdjustApu">不要超频APU（防止超频引起的音高变化）</Control>
 
-			<Control ID="tpgVideo">Video</Control>
-			<Control ID="lblGameboyPalette">Game Boy (DMG) Palette</Control>
-			<Control ID="lblGbBackground">Background:</Control>
-			<Control ID="lblGbObj0">Sprites #1:</Control>
-			<Control ID="lblGbObj1">Sprites #2:</Control>
-			<Control ID="btnSelectPreset">Select Preset...</Control>
+			<Control ID="chkShowLagCounter">显示滞后计数器</Control>
+			<Control ID="btnResetLagCounter">重置计数器</Control>
 
-			<Control ID="lblLcdSettings">LCD Settings</Control>
-			<Control ID="chkGbBlendFrames">Enable LCD frame blending</Control>
-			<Control ID="chkGbcAdjustColors">Enable GBC LCD color emulation</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmGameboyConfig" Title="Game Boy Config">	
+			<Control ID="tpgGeneral">一般的</Control>
+			<Control ID="lblModel">模型</Control>
+			<Control ID="chkUseSgb2">使用 Super Game Boy 2 的时间和行为</Control>
 
-			<Control ID="tpgAudio">Audio</Control>
-			<Control ID="grpVolume">Volume</Control>
-			
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmPreferences" Title="Preferences">
-			<Control ID="tpgGeneral">General</Control>
-			<Control ID="lblDisplayLanguage">Display Language:</Control>
-			<Control ID="chkSingleInstance">Only allow one instance of Mesen-S at a time</Control>
-			<Control ID="chkAutomaticallyCheckForUpdates">Automatically check for updates</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="lblGameboyPalette">Game Boy (DMG) 调色板</Control>
+			<Control ID="lblGbBackground">背景：</Control>
+			<Control ID="lblGbObj0">精灵 #1：</Control>
+			<Control ID="lblGbObj1">精灵 #2：</Control>
+			<Control ID="btnSelectPreset">选择预设...</Control>
 
-			<Control ID="chkDeveloperMode">Enable developer mode</Control>
+			<Control ID="lblLcdSettings">液晶屏设置</Control>
+			<Control ID="chkGbBlendFrames">启用 LCD 帧混合</Control>
+			<Control ID="chkGbcAdjustColors">启用 GBC LCD 颜色仿真</Control>
 
-			<Control ID="lblPauseBackgroundSettings">Pause/Background Settings</Control>
-			<Control ID="lblMiscSettings">Miscellaneous Settings</Control>
-			<Control ID="chkAutoHideMenu">Automatically hide menu bar</Control>
-			<Control ID="chkDisplayTitleBarInfo">Display additional information in title bar</Control>
+			<Control ID="tpgAudio">声音的</Control>
+			<Control ID="grpVolume">体积</Control>
 
-			<Control ID="chkConfirmExitResetPower">Display confirmation dialog before reset/power cycle/exit</Control>
-			<Control ID="chkPauseOnMovieEnd">Pause when a movie finishes playing</Control>
-			<Control ID="chkAllowBackgroundInput">Allow input when in background</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmPreferences" Title="Preferences">	
+			<Control ID="tpgGeneral">一般的</Control>
+			<Control ID="lblDisplayLanguage">显示语言：</Control>
+			<Control ID="chkSingleInstance">一次只允许一个 Mesen-S 实例</Control>
+			<Control ID="chkAutomaticallyCheckForUpdates">自动检查更新</Control>
 
-			<Control ID="lblPauseIn">Pause when in:</Control>
-			<Control ID="chkPauseWhenInBackground">Background</Control>
-			<Control ID="chkPauseInMenuAndConfig">Menu and config dialogs</Control>
-			<Control ID="chkPauseInDebugger">Debugging tools</Control>
+			<Control ID="chkDeveloperMode">开启开发者模式</Control>
 
-			<Control ID="chkPauseWhenInBackground">Background</Control>
-			<Control ID="chkAutoLoadIps">Automatically load IPS/BPS patches</Control>
-			<Control ID="chkHidePauseOverlay">Hide the pause screen</Control>
-			<Control ID="chkDisplayMovieIcons">Display play/record icon when playing or recording a movie</Control>
-			<Control ID="btnOpenMesenFolder">Open Mesen-S Folder</Control>
-			<Control ID="btnResetSettings">Reset All Settings</Control>
+			<Control ID="lblPauseBackgroundSettings">暂停/背景设置</Control>
+			<Control ID="lblMiscSettings">杂项设置</Control>
+			<Control ID="chkAutoHideMenu">自动隐藏菜单栏</Control>
+			<Control ID="chkDisplayTitleBarInfo">在标题栏中显示附加信息</Control>
 
-			<Control ID="tpgFiles">Folders/Files</Control>
-			<Control ID="grpFileAssociations">File Associations</Control>
-			<Control ID="chkRomFormat">.SFC, .SMC, .SWC, .FIG (Roms)</Control>
-			<Control ID="chkSpcFormat">.SPC (Sound/music files)</Control>
-			<Control ID="chkMsmFormat">.MMO (Movie)</Control>
-			<Control ID="chkMssFormat">.MSS (Save State)</Control>
+			<Control ID="chkConfirmExitResetPower">重置/重启/退出前的对话框</Control>
+			<Control ID="chkPauseOnMovieEnd">电影播放完毕时暂停</Control>
+			<Control ID="chkAllowBackgroundInput">在后台允许输入</Control>
 
-			<Control ID="grpDataStorageLocation">Data Storage Location</Control>
-			<Control ID="radStorageDocuments">Store data in my user profile</Control>
-			<Control ID="radStoragePortable">Store data in the same folder as the application</Control>
-			<Control ID="lblDataLocation">Folder:</Control>
+			<Control ID="lblPauseIn">进入时暂停：</Control>
+			<Control ID="chkPauseWhenInBackground">背景</Control>
+			<Control ID="chkPauseInMenuAndConfig">菜单和配置对话框</Control>
+			<Control ID="chkPauseInDebugger">调试工具</Control>
 
-			<Control ID="grpPathOverrides">Folder Overrides</Control>
-			<Control ID="chkGameOverride">Games:</Control>
-			<Control ID="chkAviOverride">Videos:</Control>
-			<Control ID="chkScreenshotsOverride">Screenshots:</Control>
-			<Control ID="chkSaveDataOverride">Save Data:</Control>
-			<Control ID="chkWaveOverride">Audio:</Control>
-			<Control ID="chkSaveStatesOverride">Save States:</Control>
-			<Control ID="chkMoviesOverride">Movies:</Control>
+			<Control ID="chkPauseWhenInBackground">背景</Control>
+			<Control ID="chkAutoLoadIps">自动加载 IPS/BPS 补丁</Control>
+			<Control ID="chkHidePauseOverlay">隐藏暂停画面</Control>
+			<Control ID="chkDisplayMovieIcons">播放或录制电影时显示播放/录制图标</Control>
+			<Control ID="btnOpenMesenFolder">打开 Mesen-S 文件夹</Control>
+			<Control ID="btnResetSettings">重置所有设置</Control>
 
-			<Control ID="tpgAdvanced">Advanced</Control>
-			<Control ID="chkShowFullPathInRecents">Show full file path in recent file list</Control>
-			<Control ID="chkShowFrameCounter">Show frame counter</Control>
-			<Control ID="chkShowGameTimer">Show game timer</Control>
-			<Control ID="chkShowVsConfigOnLoad">Show game configuration dialog when loading VS System games</Control>
+			<Control ID="tpgFiles">文件夹/文件</Control>
+			<Control ID="grpFileAssociations">文件关联</Control>
+			<Control ID="chkRomFormat">.SFC、.SMC、.SWC、.FIG (Roms)</Control>
+			<Control ID="chkSpcFormat">.SPC（声音/音乐文件）</Control>
+			<Control ID="chkMsmFormat">.MMO（电影）</Control>
+			<Control ID="chkMssFormat">.MSS（保存状态）</Control>
 
-			<Control ID="lblAdvancedMisc">Miscellaneous Settings</Control>
-			<Control ID="lblRewind">Keep rewind data for the last</Control>
-			<Control ID="lblRewindMinutes">minutes (Memory Usage ≈5MB/min)</Control>
+			<Control ID="grpDataStorageLocation">数据存储位置</Control>
+			<Control ID="radStorageDocuments">将数据存储在我的用户配置文件中</Control>
+			<Control ID="radStoragePortable">将数据存储在与应用程序相同的文件夹中</Control>
+			<Control ID="lblDataLocation">文件夹：</Control>
 
-			<Control ID="tpgShortcuts">Shortcut Keys</Control>
-			<Control ID="lblShortcutWarning">Warning: Your current configuration contains conflicting key bindings. If this is not intentional, please review and correct your key bindings.</Control>
-			<Control ID="colAction">Action</Control>
-			<Control ID="colBinding1">Binding #1</Control>
-			<Control ID="colBinding2">Binding #2</Control>
+			<Control ID="grpPathOverrides">文件夹覆盖</Control>
+			<Control ID="chkGameOverride">游戏：</Control>
+			<Control ID="chkAviOverride">视频：</Control>
+			<Control ID="chkScreenshotsOverride">截图：</Control>
+			<Control ID="chkSaveDataOverride">保存数据：</Control>
+			<Control ID="chkWaveOverride">声音的：</Control>
+			<Control ID="chkSaveStatesOverride">保存状态：</Control>
+			<Control ID="chkMoviesOverride">电影：</Control>
 
-			<Control ID="tpgSaveData">Save Data</Control>
-			<Control ID="grpAutomaticSaves">Save States</Control>
-			<Control ID="chkAutoSave">Automatically create a save state every</Control>
-			<Control ID="lblAutoSave">minutes</Control>
-			<Control ID="chkAutoSaveNotify">Notify when an automatic save state is saved</Control>
-			<Control ID="chkAllowMismatchingSaveStates">Allow save states to be loaded on modified ROMs (e.g IPS patches)</Control>
+			<Control ID="tpgAdvanced">先进的</Control>
+			<Control ID="chkShowFullPathInRecents">在最近的文件列表中显示完整的文件路径</Control>
+			<Control ID="chkShowFrameCounter">显示帧计数器</Control>
+			<Control ID="chkShowGameTimer">显示游戏计时器</Control>
+			<Control ID="chkShowVsConfigOnLoad">加载 VS 系统游戏时显示游戏配置对话框</Control>
 
-			<Control ID="lblUiDisplaySettings">UI Display Settings</Control>
-			<Control ID="lblWindowSettings">Window Settings</Control>
-			<Control ID="chkDisableMouseResize">Do not allow the main window to be resized using the mouse</Control>
-			<Control ID="lblGameSelectionScreenSettings">Game Selection Screen Settings</Control>
-			<Control ID="chkGameSelectionScreenResetGame">Start game from power-on instead of resuming the previous gameplay session</Control>
-			<Control ID="chkDisableGameSelectionScreen">Disable game selection screen</Control>
+			<Control ID="lblAdvancedMisc">杂项设置</Control>
+			<Control ID="lblRewind">保留最后的倒带数据</Control>
+			<Control ID="lblRewindMinutes">分钟（内存使用≈5MB/分钟）</Control>
 
-			<Control ID="chkDisableGameDatabase">Disable built-in game database</Control>
-			<Control ID="chkDisableHighResolutionTimer">Disable high resolution timer</Control>
-			<Control ID="chkDisableOsd">Disable on-screen display (OSD)</Control>
+			<Control ID="tpgShortcuts">快捷键</Control>
+			<Control ID="lblShortcutWarning">警告：您当前的配置包含冲突的键绑定。如果这不是故意的，请检查并更正您的键绑定。</Control>
+			<Control ID="colAction">行动</Control>
+			<Control ID="colBinding1">绑定 #1</Control>
+			<Control ID="colBinding2">绑定 #2</Control>
 
-			<Control ID="chkAlwaysOnTop">Always display on top of other windows</Control>
+			<Control ID="tpgSaveData">保存数据</Control>
+			<Control ID="grpAutomaticSaves">保存状态</Control>
+			<Control ID="chkAutoSave">每隔一段时间自动创建一个保存状态</Control>
+			<Control ID="lblAutoSave">分钟</Control>
+			<Control ID="chkAutoSaveNotify">保存自动保存状态时通知</Control>
+			<Control ID="chkAllowMismatchingSaveStates">允许在修改后的 ROM 上加载保存状态（例如 IPS 补丁）</Control>
 
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmServerConfig" Title="Server Configuration">
-			<Control ID="lblPort">Port:</Control>
-			<Control ID="lblServerName">Server name:</Control>
-			<Control ID="lblPassword">Password:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmClientConfig" Title="Connect...">
-			<Control ID="lblHost">Host:</Control>
-			<Control ID="lblPort">Port:</Control>
-			<Control ID="lblPassword">Password:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmCheatImport" Title="Import Cheats">
-			<Control ID="grpImportOptions">Import Options</Control>
-			<Control ID="lblCheatFile">Cheat File:</Control>
-			<Control ID="lblGame">Game:</Control>
-			<Control ID="btnBrowseCheat">Browse...</Control>
-			<Control ID="btnBrowseGame">Browse...</Control>
-			<Control ID="btnImport">Import</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmCheatImport" Title="Import Cheats">
-			<Control ID="grpImportOptions">Import Options</Control>
-			<Control ID="lblCheatFile">Cheat File:</Control>
-			<Control ID="lblGame">Game:</Control>
-			<Control ID="btnBrowseCheat">Browse...</Control>
-			<Control ID="btnBrowseGame">Browse...</Control>
-			<Control ID="btnImport">Import</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmCheatDbList" Title="Select Game...">
-			<Control ID="lblSearch">Search:</Control>
-			<Control ID="btnOK">Import Cheats</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmCheatList" Title="Cheats">
-			<Control ID="tabCheats">Cheats</Control>
-			<Control ID="btnAddCheat">Add Cheat</Control>
-			<Control ID="btnDeleteCheat">Delete</Control>
-			<Control ID="mnuAddCheat">Add cheat...</Control>
-			<Control ID="mnuDeleteCheat">Delete</Control>
-			<Control ID="colCheatName">Cheat Name</Control>
-			<Control ID="colCode">Code</Control>
-			<Control ID="chkDisableCheats">Disable all cheats</Control>
+			<Control ID="lblUiDisplaySettings">用户界面显示设置</Control>
+			<Control ID="lblWindowSettings">窗口设置</Control>
+			<Control ID="chkDisableMouseResize">不允许使用鼠标调整主窗口的大小</Control>
+			<Control ID="lblGameSelectionScreenSettings">游戏选择画面设定</Control>
+			<Control ID="chkGameSelectionScreenResetGame">从开机开始游戏而不是恢复之前的游戏会话</Control>
+			<Control ID="chkDisableGameSelectionScreen">禁用游戏选择屏幕</Control>
 
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmCheat" Title="Edit Cheat">
-			<Control ID="lblDescription">Description:</Control>
-			<Control ID="grpCode">Codes</Control>
-			<Control ID="radGameGenie">Game Genie (e.g: A1B2-C3D4)</Control>
-			<Control ID="radProActionReplay">Pro Action Replay (e.g: AAAAAAVV)</Control>
-			<Control ID="chkEnabled">Cheat Enabled</Control>
-			<Control ID="lblHint">To enter multiple codes, enter 1 code per line.</Control>
-			<Control ID="lblInvalidCodes">Some codes do not match the selected format.</Control>
-			
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmAbout" Title="About - Mesen-S">
-			<Control ID="labelProductName">Mesen-S</Control>
-			<Control ID="labelCopyright">© 2019 M. Bibaud (aka Sour)</Control>
-			<Control ID="lblWebsite">Website:</Control>
+			<Control ID="chkDisableGameDatabase">禁用内置游戏数据库</Control>
+			<Control ID="chkDisableHighResolutionTimer">禁用高分辨率计时器</Control>
+			<Control ID="chkDisableOsd">禁用屏幕显示 (OSD)</Control>
+
+			<Control ID="chkAlwaysOnTop">始终显示在其他窗口之上</Control>
+
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmServerConfig" Title="Server Configuration">	
+			<Control ID="lblPort">港口：</Control>
+			<Control ID="lblServerName">服务器名称：</Control>
+			<Control ID="lblPassword">密码：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmClientConfig" Title="Connect...">	
+			<Control ID="lblHost">主持人：</Control>
+			<Control ID="lblPort">港口：</Control>
+			<Control ID="lblPassword">密码：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmCheatImport" Title="Import Cheats">	
+			<Control ID="grpImportOptions">导入选项</Control>
+			<Control ID="lblCheatFile">作弊文件：</Control>
+			<Control ID="lblGame">游戏：</Control>
+			<Control ID="btnBrowseCheat">浏览...</Control>
+			<Control ID="btnBrowseGame">浏览...</Control>
+			<Control ID="btnImport">进口</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmCheatImport" Title="Import Cheats">	
+			<Control ID="grpImportOptions">导入选项</Control>
+			<Control ID="lblCheatFile">作弊文件：</Control>
+			<Control ID="lblGame">游戏：</Control>
+			<Control ID="btnBrowseCheat">浏览...</Control>
+			<Control ID="btnBrowseGame">浏览...</Control>
+			<Control ID="btnImport">进口</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmCheatDbList" Title="Select Game...">	
+			<Control ID="lblSearch">搜索：</Control>
+			<Control ID="btnOK">进口秘籍</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmCheatList" Title="Cheats">	
+			<Control ID="tabCheats">秘籍</Control>
+			<Control ID="btnAddCheat">添加作弊</Control>
+			<Control ID="btnDeleteCheat">删除</Control>
+			<Control ID="mnuAddCheat">添加作弊...</Control>
+			<Control ID="mnuDeleteCheat">删除</Control>
+			<Control ID="colCheatName">作弊名称</Control>
+			<Control ID="colCode">代码</Control>
+			<Control ID="chkDisableCheats">禁用所有作弊</Control>
+
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmCheat" Title="Edit Cheat">	
+			<Control ID="lblDescription">描述：</Control>
+			<Control ID="grpCode">代码</Control>
+			<Control ID="radGameGenie">游戏精灵（例如：A1B2-C3D4）</Control>
+			<Control ID="radProActionReplay">专业动作重播（例如：AAAAAAVV）</Control>
+			<Control ID="chkEnabled">作弊启用</Control>
+			<Control ID="lblHint">要输入多个代码，请每行输入 1 个代码。</Control>
+			<Control ID="lblInvalidCodes">某些代码与所选格式不匹配。</Control>
+
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmAbout" Title="About - Mesen-S">	
+			<Control ID="labelProductName">美森-S</Control>
+			<Control ID="labelCopyright">© 2019 M. Bibaud（又名 Sour）</Control>
+			<Control ID="lblWebsite">网站：</Control>
 			<Control ID="lblLink">www.mesen.ca/snes/</Control>
-			<Control ID="labelVersion">Version:</Control>
-			<Control ID="lblBuildDateLabel">Build Date:</Control>
+			<Control ID="labelVersion">版本：</Control>
+			<Control ID="lblBuildDateLabel">建造日期：</Control>
 
-			<Control ID="grpAcknowledgements">Acknowledgements</Control>
-			<Control ID="lblUsedSoftware">This software uses the following libraries:</Control>
-			<Control ID="lblGeneral">General:</Control>
-			<Control ID="lblVideo">Video:</Control>
-			<Control ID="lblAudio">Audio:</Control>
-			<Control ID="lblEmulation">Emulation:</Control>
-			<Control ID="lblCheats">Cheats:</Control>
-			<Control ID="lblSpecialThanks">And thank you to everybody who has contributed in any way! (donations, bug reports, testing, sharing information, etc.)</Control>
+			<Control ID="grpAcknowledgements">致谢</Control>
+			<Control ID="lblUsedSoftware">该软件使用以下库：</Control>
+			<Control ID="lblGeneral">一般的：</Control>
+			<Control ID="lblVideo">视频：</Control>
+			<Control ID="lblAudio">声音的：</Control>
+			<Control ID="lblEmulation">仿真：</Control>
+			<Control ID="lblCheats">秘籍：</Control>
+			<Control ID="lblSpecialThanks">并感谢所有以任何方式做出贡献的人！ （捐赠、错误报告、测试、共享信息等）</Control>
 
-			<Control ID="lblDonate">If you want to support Mesen-S, please consider donating.&#13;Thank you for your support!</Control>
-			<Control ID="okButton">&amp;OK</Control>
-		</Form>
-		<Form ID="frmGameConfig" Title="Game Configuration">
-			<Control ID="grpDipSwitches">DIP Switches</Control>
-		</Form>
-		<Form ID="frmUpdatePrompt" Title="Mesen-S - Update Available">
-			<Control ID="lblLatestVersion">Latest Version:</Control>
-			<Control ID="lblCurrentVersion">Current Version:</Control>
-			<Control ID="lblChangeLog">Changelog:</Control>
-			<Control ID="lblDonate">If you want to support Mesen-S, please consider donating.  Thank you!</Control>
-			<Control ID="btnUpdate">Update</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmSelectRom" Title="Select Rom...">
-			<Control ID="lblSearch">Search:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmGetKey" Title="Set key binding...">
-			<Control ID="lblSetKeyMessage">Press any key on your keyboard or controller to set a new binding.</Control>
-		</Form>
-		<Form ID="frmPlayerProfile" Title="Profile">
-			<Control ID="lblName">Player name:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmRecordAvi" Title="Video Recording Options">
-			<Control ID="lblAviFile">Save to:</Control>
-			<Control ID="lblCodec">Video Codec:</Control>
-			<Control ID="lblCompressionLevel">Compression Level:</Control>
-			<Control ID="lblLowCompression">low&#13;(fast)</Control>
-			<Control ID="lblHighCompression">high&#13;(slow)</Control>
-			<Control ID="btnBrowse">Browse...</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmHdPackEditor" Title="HD Pack Builder">
-			<Control ID="grpPreview">CHR Bank Preview</Control>
-			<Control ID="lblChrBank">CHR Bank:</Control>
-			<Control ID="grpOptions">Recording Options</Control>
-			<Control ID="lblBankSize">CHR Bank Size:</Control>
-			<Control ID="lblScale">Scale/Filter:</Control>
-			<Control ID="chkSortByFrequency">Sort pages by usage frequency</Control>
-			<Control ID="chkLargeSprites">Use 8x16 sprite display mode</Control>
-			<Control ID="chkGroupBlankTiles">Group blank tiles</Control>
-			<Control ID="chkIgnoreOverscan">Ignore tiles at the edges of the screen (overscan)</Control>
-			<Control ID="lblFolder">Save Folder:</Control>
-			<Control ID="btnSelectFolder">Browse...</Control>
-			<Control ID="btnStartRecording">Start Recording</Control>
-			<Control ID="btnStopRecording">Stop Recording</Control>
-			<Control ID="btnOpenFolder">Open Save Folder</Control>
-		</Form>
-		<Form ID="frmHistoryViewer" Title="History Viewer">
-			<Control ID="lblVolume">Volume</Control>
-			<Control ID="mnuFile">File</Control>
-			<Control ID="mnuImportMovie">Import Movie</Control>
-			<Control ID="mnuExportMovie">Export Movie</Control>
-			<Control ID="mnuCreateSaveState">Create Save State</Control>
-			<Control ID="mnuResumeGameplay">Resume Gameplay</Control>
-			<Control ID="mnuClose">Close</Control>
+			<Control ID="lblDonate">如果您想支持Mesen-S，请考虑捐赠。&#13;感谢您的支持！</Control>
+			<Control ID="okButton">&amp;确定</Control>
+		</Form>	
+		<Form ID="frmGameConfig" Title="Game Configuration">	
+			<Control ID="grpDipSwitches">拨码开关</Control>
+		</Form>	
+		<Form ID="frmUpdatePrompt" Title="Mesen-S - Update Available">	
+			<Control ID="lblLatestVersion">最新版本：</Control>
+			<Control ID="lblCurrentVersion">当前版本：</Control>
+			<Control ID="lblChangeLog">变更日志：</Control>
+			<Control ID="lblDonate">如果您想支持 Mesen-S，请考虑捐赠。谢谢！</Control>
+			<Control ID="btnUpdate">更新</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmSelectRom" Title="Select Rom...">	
+			<Control ID="lblSearch">搜索：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmGetKey" Title="Set key binding...">	
+			<Control ID="lblSetKeyMessage">按键盘或控制器上的任意键设置新绑定。</Control>
+		</Form>	
+		<Form ID="frmPlayerProfile" Title="Profile">	
+			<Control ID="lblName">选手姓名：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmRecordAvi" Title="Video Recording Options">	
+			<Control ID="lblAviFile">存到：</Control>
+			<Control ID="lblCodec">视频编解码器：</Control>
+			<Control ID="lblCompressionLevel">压缩级别：</Control>
+			<Control ID="lblLowCompression">低&#13;（快）</Control>
+			<Control ID="lblHighCompression">高&#13;（慢）</Control>
+			<Control ID="btnBrowse">浏览...</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmHdPackEditor" Title="HD Pack Builder">	
+			<Control ID="grpPreview">CHR 银行预览</Control>
+			<Control ID="lblChrBank">CHR银行：</Control>
+			<Control ID="grpOptions">录音选项</Control>
+			<Control ID="lblBankSize">CHR 银行规模：</Control>
+			<Control ID="lblScale">规模/过滤器：</Control>
+			<Control ID="chkSortByFrequency">按使用频率对页面进行排序</Control>
+			<Control ID="chkLargeSprites">使用 8x16 精灵显示模式</Control>
+			<Control ID="chkGroupBlankTiles">分组空白瓷砖</Control>
+			<Control ID="chkIgnoreOverscan">忽略屏幕边缘的图块（过扫描）</Control>
+			<Control ID="lblFolder">保存文件夹：</Control>
+			<Control ID="btnSelectFolder">浏览...</Control>
+			<Control ID="btnStartRecording">开始录音</Control>
+			<Control ID="btnStopRecording">停止录音</Control>
+			<Control ID="btnOpenFolder">打开保存文件夹</Control>
+		</Form>	
+		<Form ID="frmHistoryViewer" Title="History Viewer">	
+			<Control ID="lblVolume">体积</Control>
+			<Control ID="mnuFile">文件</Control>
+			<Control ID="mnuImportMovie">导入电影</Control>
+			<Control ID="mnuExportMovie">导出电影</Control>
+			<Control ID="mnuCreateSaveState">创建保存状态</Control>
+			<Control ID="mnuResumeGameplay">恢复游戏</Control>
+			<Control ID="mnuClose">关闭</Control>
 
-			<Control ID="mnuOptions">Options</Control>
-			<Control ID="mnuVideoScale">Video Size</Control>
+			<Control ID="mnuOptions">选项</Control>
+			<Control ID="mnuVideoScale">视频大小</Control>
 			<Control ID="mnuScale1x">1x</Control>
-			<Control ID="mnuScale2x">2x</Control>
-			<Control ID="mnuScale3x">3x</Control>
-			<Control ID="mnuScale4x">4x</Control>
-			<Control ID="mnuScale5x">5x</Control>
-			<Control ID="mnuScale6x">6x</Control>
-		</Form>
-		<Form ID="frmSelectExportRange" Title="Export specific range...">
-			<Control ID="lblStartTime">Start time:</Control>
-			<Control ID="lblEndTime">End time:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmHelp" Title="Command-line options">
-			<Control ID="grpExample">Usage Example</Control>
-			<Control ID="tpgGeneralOptions">General</Control>
-			<Control ID="tpgVideoOptions">Video Options</Control>
-			<Control ID="tpgAudioOptions">Audio Options</Control>
-			<Control ID="tpgEmulationOptions">Emulation Options</Control>
-			<Control ID="lblExplanation">This will start Mesen-S in fullscreen mode with the "MyGame.nes" rom loaded.  It will also use the NTSC filter, set at a 2x scale and configure the Overscan settings.  The "DoNotSaveSettings" flag is used to prevent the command line switches from pernanently altering Mesen-S's settings.</Control>
-		</Form>
-		<Form ID="frmCopyFiles" Title="Please wait...">
-			<Control ID="lblCopying">Copying:</Control>
-		</Form>
-		<Form ID="frmConfigWizard" Title="Mesen-S - Configuration">
-			<Control ID="lblMesen">Mesen-S - SNES Emulator</Control>
-			<Control ID="lblConfigWizard">Configuration Wizard</Control>
-			<Control ID="lblInitialSetup">Please take a moment to perform Mesen-S's initial setup.</Control>
-			<Control ID="lblStorageLocation">Data Storage Location</Control>
-			<Control ID="lblStorageHint">Select where you want to store Mesen-S's data:</Control>
-			<Control ID="radStorageDocuments">Store the data in my user profile</Control>
-			<Control ID="radStoragePortable">Store the data in the same folder as the application</Control>
-			<Control ID="lblDataLocation">Folder:</Control>
-			<Control ID="lblInputMappings">Input Mappings</Control>
-			<Control ID="lblInputHint">Select your preferred input methods:</Control>
-			<Control ID="lblMiscOptions">Other Options</Control>
-			<Control ID="chkCreateShortcut">Create a shortcut on my desktop</Control>
-			<Control ID="btnOk">CONFIRM</Control>
-			<Control ID="lblCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmRecordMovie" Title="Movie Recording Options">
-			<Control ID="lblSaveTo">Save to:</Control>
-			<Control ID="lblRecordFrom">Record from:</Control>
-			<Control ID="lblMovieInformation">Movie Information (Optional)</Control>
-			<Control ID="lblAuthor">Author:</Control>
-			<Control ID="lblDescription">Description:</Control>
-			<Control ID="btnBrowse">Browse...</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmInputBarCode" Title="Input Barcode...">
-			<Control ID="lblBarcode">Barcode:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="BaseInputConfigForm">
-			<Control ID="lblHint">Tabs with an icon contain key bindings for this player.&#13;Each button can be mapped to up to 4 different keyboard keys or gamepad buttons.</Control>
-			<Control ID="tpgSet1">Key Set #1</Control>
-			<Control ID="tpgSet2">Key Set #2</Control>
-			<Control ID="tpgSet3">Key Set #3</Control>
-			<Control ID="tpgSet4">Key Set #4</Control>
-			<Control ID="btnSetDefault">Set Default Bindings</Control>
-			<Control ID="btnClear">Clear Key Bindings</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmControllerConfig">
-			<Control ID="lblTurboSpeed">Turbo Speed:</Control>
-			<Control ID="lblTurboFast">Fast</Control>
-			<Control ID="lblSlow">Slow</Control>
+			<Control ID="mnuScale2x">2倍</Control>
+			<Control ID="mnuScale3x">3倍</Control>
+			<Control ID="mnuScale4x">4倍</Control>
+			<Control ID="mnuScale5x">5倍</Control>
+			<Control ID="mnuScale6x">6倍</Control>
+		</Form>	
+		<Form ID="frmSelectExportRange" Title="Export specific range...">	
+			<Control ID="lblStartTime">开始时间：</Control>
+			<Control ID="lblEndTime">时间结束：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmHelp" Title="Command-line options">	
+			<Control ID="grpExample">使用示例</Control>
+			<Control ID="tpgGeneralOptions">一般的</Control>
+			<Control ID="tpgVideoOptions">视频选项</Control>
+			<Control ID="tpgAudioOptions">音频选项</Control>
+			<Control ID="tpgEmulationOptions">仿真选项</Control>
+			<Control ID="lblExplanation">这将在全屏模式下启动 Mesen-S，并加载“MyGame.nes” rom。它还将使用 NTSC 过滤器，设置为 2x 比例并配置 Overscan 设置。 “DoNotSaveSettings”标志用于防止命令行开关永久更改 Mesen-S 的设置。</Control>
+		</Form>	
+		<Form ID="frmCopyFiles" Title="Please wait...">	
+			<Control ID="lblCopying">复制：</Control>
+		</Form>	
+		<Form ID="frmConfigWizard" Title="Mesen-S - Configuration">	
+			<Control ID="lblMesen">Mesen-S - SNES 模拟器</Control>
+			<Control ID="lblConfigWizard">配置向导</Control>
+			<Control ID="lblInitialSetup">请花点时间执行 Mesen-S 的初始设置。</Control>
+			<Control ID="lblStorageLocation">数据存储位置</Control>
+			<Control ID="lblStorageHint">选择您要存储 Mesen-S 数据的位置：</Control>
+			<Control ID="radStorageDocuments">将数据存储在我的用户配置文件中</Control>
+			<Control ID="radStoragePortable">将数据存储在与应用程序相同的文件夹中</Control>
+			<Control ID="lblDataLocation">文件夹：</Control>
+			<Control ID="lblInputMappings">输入映射</Control>
+			<Control ID="lblInputHint">选择您喜欢的输入法：</Control>
+			<Control ID="lblMiscOptions">其他选项</Control>
+			<Control ID="chkCreateShortcut">在我的桌面上创建快捷方式</Control>
+			<Control ID="btnOk">确认</Control>
+			<Control ID="lblCancel">取消</Control>
+		</Form>	
+		<Form ID="frmRecordMovie" Title="Movie Recording Options">	
+			<Control ID="lblSaveTo">存到：</Control>
+			<Control ID="lblRecordFrom">记录自：</Control>
+			<Control ID="lblMovieInformation">电影信息（可选）</Control>
+			<Control ID="lblAuthor">作者：</Control>
+			<Control ID="lblDescription">描述：</Control>
+			<Control ID="btnBrowse">浏览...</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmInputBarCode" Title="Input Barcode...">	
+			<Control ID="lblBarcode">条码：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="BaseInputConfigForm">	
+			<Control ID="lblHint">带有图标的选项卡包含此播放器的键绑定。每个按钮最多可以映射到 4 个不同的键盘键或游戏手柄按钮。</Control>
+			<Control ID="tpgSet1">密钥集 #1</Control>
+			<Control ID="tpgSet2">密钥集 #2</Control>
+			<Control ID="tpgSet3">密钥集 #3</Control>
+			<Control ID="tpgSet4">密钥集 #4</Control>
+			<Control ID="btnSetDefault">设置默认绑定</Control>
+			<Control ID="btnClear">清除键绑定</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmControllerConfig">	
+			<Control ID="lblTurboSpeed">涡轮速度：</Control>
+			<Control ID="lblTurboFast">快速地</Control>
+			<Control ID="lblSlow">减缓</Control>
 
-			<Control ID="btnSelectPreset">Select Preset...</Control>
-			<Control ID="mnuKeyboard">Keyboard</Control>
-			<Control ID="mnuWasdLayout">WASD Layout</Control>
-			<Control ID="mnuArrowLayout">Arrow Keys Layout</Control>
-			<Control ID="mnuXboxController">Xbox Controller</Control>
-			<Control ID="mnuXboxLayout1">Controller #1</Control>
-			<Control ID="mnuXboxLayout2">Controller #2</Control>
-			<Control ID="mnuPs4Controller">PS4 Controller</Control>
-			<Control ID="mnuPs4Layout1">Controller #1</Control>
-			<Control ID="mnuPs4Layout2">Controller #2</Control>
-			<Control ID="mnuSnes30Controller">SNES30 Controller</Control>
-			<Control ID="mnuSnes30Layout1">Controller #1</Control>
-			<Control ID="mnuSnes30Layout2">Controller #2</Control>
-		</Form>
-		<Form ID="frmZapperConfig">
-			<Control ID="lblSmall">Small</Control>
-			<Control ID="lblLarge">Large</Control>
-			<Control ID="lblDetectRadius">Light Detection Radius:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-		<Form ID="frmMouseConfig">
-			<Control ID="lblLow">Low</Control>
-			<Control ID="lblHigh">High</Control>
-			<Control ID="lblSensitivity">Sensitivity:</Control>
-			<Control ID="btnOK">OK</Control>
-			<Control ID="btnCancel">Cancel</Control>
-		</Form>
-	</Forms>
-	<UserControls>
+			<Control ID="btnSelectPreset">选择预设...</Control>
+			<Control ID="mnuKeyboard">键盘</Control>
+			<Control ID="mnuWasdLayout">WASD 布局</Control>
+			<Control ID="mnuArrowLayout">箭头键布局</Control>
+			<Control ID="mnuXboxController">Xbox 控制器</Control>
+			<Control ID="mnuXboxLayout1">控制器 #1</Control>
+			<Control ID="mnuXboxLayout2">控制器#2</Control>
+			<Control ID="mnuPs4Controller">PS4 控制器</Control>
+			<Control ID="mnuPs4Layout1">控制器 #1</Control>
+			<Control ID="mnuPs4Layout2">控制器#2</Control>
+			<Control ID="mnuSnes30Controller">SNES30 控制器</Control>
+			<Control ID="mnuSnes30Layout1">控制器 #1</Control>
+			<Control ID="mnuSnes30Layout2">控制器#2</Control>
+		</Form>	
+		<Form ID="frmZapperConfig">	
+			<Control ID="lblSmall">小的</Control>
+			<Control ID="lblLarge">大的</Control>
+			<Control ID="lblDetectRadius">光探测半径：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+		<Form ID="frmMouseConfig">	
+			<Control ID="lblLow">低的</Control>
+			<Control ID="lblHigh">高的</Control>
+			<Control ID="lblSensitivity">灵敏度：</Control>
+			<Control ID="btnOK">好的</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>	
+	</Forms>		
+	<UserControls>		
 	</UserControls>
 	<Messages>
 		<Message ID="FilterAll">All Files (*.*)|*.*</Message>
