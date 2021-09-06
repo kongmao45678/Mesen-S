@@ -87,6 +87,7 @@
 			<Control ID="mnuTestStopRecording">停止录音</Control>
 			<Control ID="mnuRunAllTests">运行所有测试</Control>
 			<Control ID="mnuDebugger">调试器</Control>
+			<Control ID="mnuMemoryTools">内存工具</Control>
 			<Control ID="mnuLogWindow">日志窗口</Control>
 			<Control ID="mnuInstallHdPack">安装高清包</Control>
 			<Control ID="mnuHdPackEditor">高清包生成器</Control>
