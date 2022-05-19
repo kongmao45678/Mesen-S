@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Resources>
+<?xml version="1.0" encoding="UTF-8"?>
+<Resources>
 	<Forms>
 		<Form ID="frmMain" Title="Mesen-S">
 			<Control ID="mnuFile">文件</Control>
@@ -78,6 +79,8 @@
 			<Control ID="mnuCheats">作弊</Control>
 			<Control ID="mnuTests">测试</Control>
 			<Control ID="mnuTestRun">运行...</Control>
+			<Control ID="mnuTestRecord">录制...</Control>
+			<Control ID="mnuTestStop">停止录制...</Control>
 			<Control ID="mnuTestRecordFrom">录制自...</Control>
 			<Control ID="mnuTestRecordStart">开始</Control>
 			<Control ID="mnuTestRecordNow">立即</Control>
@@ -85,22 +88,23 @@
 			<Control ID="mnuTestRecordTest">测试</Control>
 			<Control ID="mnuTestStopRecording">停止录制</Control>
 			<Control ID="mnuRunAllTests">运行所有测试</Control>
-			<Control ID="mnuDebug">调试器</Control>
+                                                <Control ID="mnuDebug">调试</Control>
+			<Control ID="mnuDebugger">调试器</Control>
 			<Control ID="mnuEventViewer">事件查看器</Control>
-                                                <Control ID="mnuMemoryTools">内存工具</Control>
-                                                <Control ID="mnuRegisterViewer">注册查看器</Control>
-                                                <Control ID="mnuTraceLogger">跟踪记录器</Control>
-                                                <Control ID="mnuWatchWindow">窗口监视</Control>
-                                                <Control ID="mnuAssembler">汇编器</Control>
-                                                <Control ID="mnuDebugLog">调试日志</Control>
-                                                <Control ID="mnuProfiler">性能分析器</Control>
-                                                <Control ID="mnuScriptWindow">脚本窗口</Control>
-                                                <Control ID="mnuTilemapViewer">块映射查看器</Control>
-                                                <Control ID="mnuTileViewer">块映射查看器</Control>
-                                                <Control ID="mnuTilemapViewer">块查看器</Control>
-                                                <Control ID="mnuSpriteViewer">精灵查看器</Control>
-                                                <Control ID="mnuPaletteViewer">调色板查看器</Control>
-                                                <Control ID="mnuSpcDebugger">SPC 调试器</Control>
+                        <Control ID="mnuMemoryTools">内存工具</Control>
+                        <Control ID="mnuRegisterViewer">寄存器查看器</Control>
+                        <Control ID="mnuTraceLogger">跟踪记录器</Control>
+                        <Control ID="mnuWatchWindow">窗口监视</Control>
+                        <Control ID="mnuAssembler">汇编器</Control>
+                        <Control ID="mnuDebugLog">调试日志</Control>
+                        <Control ID="mnuProfiler">性能分析器</Control>
+                        <Control ID="mnuScriptWindow">脚本窗口</Control>
+                        <Control ID="mnuTilemapViewer">块映射查看器</Control>
+                        <Control ID="mnuTileViewer">块映射查看器</Control>
+                        <Control ID="mnuTilemapViewer">块查看器</Control>
+                        <Control ID="mnuSpriteViewer">活动块查看器</Control>
+                        <Control ID="mnuPaletteViewer">调色板查看器</Control>
+                        <Control ID="mnuSpcDebugger">SPC 调试器</Control>
 			<Control ID="mnuLogWindow">日志窗口</Control>
 			<Control ID="mnuInstallHdPack">安装 HD 包</Control>
 			<Control ID="mnuHdPackEditor">HD 包生成器</Control>
@@ -126,14 +130,16 @@
 			<Control ID="lblRewinding">倒带</Control>
 			<Control ID="lblFastForward">快进</Control>
 		</Form>
-		<Form ID="frmLogWindow" Title="Log Window">
+		<Form ID="frmLogWindow" Title="日志窗口">
 			<Control ID="btnClose">关闭</Control>
 		</Form>
-		<Form ID="frmAudioConfig" Title="Audio Options">
+		<Form ID="frmAudioConfig" Title="音频选项">
 			<Control ID="tpgGeneral">常规</Control>
 			<Control ID="tpgAdvanced">高级</Control>
 			<Control ID="chkDisableDynamicSampleRate">关闭动态采样率</Control>
 			<Control ID="chkMuteSoundInBackground">在后台时静音</Control>
+			<Control ID="trkMaster">主音量</Control>
+			<Control ID="lblVolume">音量:</Control>
 			<Control ID="chkReduceSoundInBackground">在后台时降低音量</Control>
 			<Control ID="chkReduceSoundInFastForward">快进/快退时降低音量</Control>
 			<Control ID="trkVolumeReduction">降低音量 (%)</Control>
@@ -154,7 +160,7 @@
 			<Control ID="tpgEqualizer">均衡器</Control>
 			<Control ID="chkEnableEqualizer">开启均衡器</Control>
 		</Form>
-		<Form ID="frmInputConfig" Title="Input Settings">
+		<Form ID="frmInputConfig" Title="输入设置">
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 			<Control ID="tpgControllers">控制器</Control>
@@ -185,6 +191,7 @@
 			<Control ID="chkDisplayPort2">端口 2</Control>
 			<Control ID="chkDisplayPort3">端口 3</Control>
 			<Control ID="chkDisplayPort4">端口 4</Control>
+			<Control ID="chkDisplayPort5">端口 5</Control>
 			<Control ID="lblDisplayPosition">显示位置:</Control>
 			<Control ID="chkDisplayInputHorizontally">水平显示</Control>
 
@@ -196,11 +203,11 @@
 
 			<Control ID="lblKeyBinding">警告: 您当前的配置包含冲突的按键绑定 - 键盘或游戏手柄上的一些物理按钮被映射到 NES 控制器上的多个按钮。如果这不是故意的,请检查并更正您的按键绑定。</Control>
 		</Form>
-		<Form ID="frmVideoConfig" Title="Video Options">
+		<Form ID="frmVideoConfig" Title="视频选项">
 			<Control ID="tpgGeneral">常规</Control>
 			<Control ID="lblVideoScale">放大:</Control>
 			<Control ID="lblVideoFilter">滤镜:</Control>
-			<Control ID="chkIntegerFpsMode">启用整数 FPS 模式 (例如：以 60fps 而不是 60.1 的速度运行)</Control>
+			<Control ID="chkIntegerFpsMode">启用整数 FPS 模式 (例如: 以 60fps 而不是 60.1 的速度运行)</Control>
 			<Control ID="chkVerticalSync">开启垂直同步</Control>
 			<Control ID="lblDisplayRatio">高宽比:</Control>
 			<Control ID="lblCustomRatio">自定义比例: </Control>
@@ -270,7 +277,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmEmulationConfig" Title="Emulation Settings">
+		<Form ID="frmEmulationConfig" Title="模拟设置">
 			<Control ID="tpgGeneral">常规</Control>
 			<Control ID="lblEmuSpeedHint">%  (0 = 最大速度)</Control>
 			<Control ID="lblEmulationSpeed">模拟速度:</Control>
@@ -278,11 +285,20 @@
 			<Control ID="lblTurboSpeed">快进速度:</Control>
 			<Control ID="lblRewindSpeedHint">%  (0 = 最大速度)</Control>
 			<Control ID="lblRewindSpeed">快退速度:</Control>
+			<Control ID="label1">区域:</Control>
 			<Control ID="lblRunAhead">加速:</Control>
 			<Control ID="lblRunAheadFrames">帧 (减少输入延迟，增加 CPU 使用率)</Control>
 			
+			<Control ID="tpgBsx">BS-X 接收器</Control>
+			<Control ID="grpBsxDateTime">BS-X/卫星接收器日期和时间设置</Control>
+			<Control ID="radBsxLocalTime">使用当前本地时间</Control>
+			<Control ID="radBsxCustomTime">使用自定义日期和时间</Control>
+
 			<Control ID="tpgAdvanced">高级</Control>
 			<Control ID="lblDeveloperSettings">推荐给开发人员的设置 (自制软件/ROM 修改)</Control>
+			<Control ID="lblRamPowerOnState">内存默认开机状态:</Control>
+			<Control ID="chkEnableRandomPowerOnState">随机化开机状态</Control>
+			<Control ID="chkEnableStrictBoardMappings">严格使用电路板映射 (会破坏部分 romhack)</Control>
 			<Control ID="lblMiscSettings">其它设置</Control>
 			<Control ID="chkAllowInvalidInput">允许无效的输入 (例如同时按下 + 上或左 + 右)</Control>
 			<Control ID="chkMapperRandomPowerOnState">随机化 mapper 的开机状态</Control>
@@ -294,6 +310,7 @@
 			<Control ID="lblOverclockHint">超频可以帮助减少或消除游戏中的掉速 (但它也可能导致问题)。要超频,请尝试将 "NMI 之前" 的值设置为几百行 (例如 300)。如果游戏出现了问题,请尝试降低该值或改用 "NMI 之后" 字段。</Control>
 			<Control ID="lblClockRate">时钟倍频器:</Control>
 			<Control ID="lblClockRatePercent">% (默认: 100%)</Control>
+			<Control ID="lblGsuClockSpeed">Super FX 时钟频率</Control>
 
 			<Control ID="grpPpuTiming">PPU 垂直空白配置</Control>
 			<Control ID="lblExtraScanlinesBeforeNmi">NMI 之前的附加扫描线:</Control>
@@ -310,7 +327,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmGameboyConfig" Title="Game Boy Config">
+		<Form ID="frmGameboyConfig" Title="Game Boy 配置">
 			<Control ID="tpgGeneral">常规</Control>
 			<Control ID="lblModel">型号</Control>
 			<Control ID="chkUseSgb2">使用 Super Game Boy 2 计时和行为</Control>
@@ -332,7 +349,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmPreferences" Title="Preferences">
+		<Form ID="frmPreferences" Title="参数">
 			<Control ID="tpgGeneral">常规</Control>
 			<Control ID="lblDisplayLanguage">显示语言:</Control>
 			<Control ID="chkSingleInstance">一次只允许一个 Mesen-S 实例</Control>
@@ -342,6 +359,7 @@
 
 			<Control ID="lblPauseBackgroundSettings">暂停/后台设置</Control>
 			<Control ID="lblMiscSettings">其它设置</Control>
+                        <Control ID="chkAutoLoadPatches">自动加载 IPS/BPS 补丁</Control>
 			<Control ID="chkAutoHideMenu">自动隐藏菜单栏</Control>
 			<Control ID="chkDisplayTitleBarInfo">在标题栏中显示其它信息</Control>
 
@@ -355,7 +373,6 @@
 			<Control ID="chkPauseInDebugger">调试工具</Control>
 
 			<Control ID="chkPauseWhenInBackground">后台</Control>
-			<Control ID="chkAutoLoadIps">自动加载 IPS/BPS 补丁</Control>
 			<Control ID="chkHidePauseOverlay">隐藏暂停屏幕</Control>
 			<Control ID="chkDisplayMovieIcons">播放或录制影片时显示播放/录制图标</Control>
 			<Control ID="btnOpenMesenFolder">打开 Mesen-S 文件夹</Control>
@@ -363,8 +380,9 @@
 
 			<Control ID="tpgFiles">文件夹/文件</Control>
 			<Control ID="grpFileAssociations">文件关联</Control>
-			<Control ID="chkRomFormat">.SFC, .SMC, .SWC, .FIG (Rom)</Control>
+			<Control ID="chkRomFormat">.SFC、.SMC、.SWC、.FIG (Rom)</Control>
 			<Control ID="chkSpcFormat">.SPC (声音/音乐文件)</Control>
+			<Control ID="chkBsFormat">.BS (BS-X 内存包)</Control>
 			<Control ID="chkMsmFormat">.MMO (影片)</Control>
 			<Control ID="chkMssFormat">.MSS (即时存档)</Control>
 
@@ -411,6 +429,8 @@
 			<Control ID="lblGameSelectionScreenSettings">游戏选择屏幕设置</Control>
 			<Control ID="chkGameSelectionScreenResetGame">重新开始游戏而不是恢复上一个游戏会话</Control>
 			<Control ID="chkDisableGameSelectionScreen">禁用游戏选择屏幕</Control>
+                        <Control ID="chkShowFps">显示 FPS</Control>
+			<Control ID="chkShowDebugInfo">显示调试信息</Control>
 
 			<Control ID="chkDisableGameDatabase">禁用内置游戏数据库</Control>
 			<Control ID="chkDisableHighResolutionTimer">禁用高分辨率计时器</Control>
@@ -421,21 +441,21 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmServerConfig" Title="Server Configuration">
+		<Form ID="frmServerConfig" Title="服务器配置">
 			<Control ID="lblPort">端口:</Control>
 			<Control ID="lblServerName">服务器名称:</Control>
 			<Control ID="lblPassword">密码:</Control>
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmClientConfig" Title="Connect...">
+		<Form ID="frmClientConfig" Title="连接...">
 			<Control ID="lblHost">主机:</Control>
 			<Control ID="lblPort">端口:</Control>
 			<Control ID="lblPassword">密码:</Control>
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmCheatImport" Title="Import Cheats">
+		<Form ID="frmCheatImport" Title="导入作弊">
 			<Control ID="grpImportOptions">导入选项</Control>
 			<Control ID="lblCheatFile">作弊文件:</Control>
 			<Control ID="lblGame">游戏:</Control>
@@ -444,7 +464,7 @@
 			<Control ID="btnImport">导入</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmCheatImport" Title="Import Cheats">
+		<Form ID="frmCheatImport" Title="导入作弊">
 			<Control ID="grpImportOptions">导入选项</Control>
 			<Control ID="lblCheatFile">作弊文件:</Control>
 			<Control ID="lblGame">游戏:</Control>
@@ -453,12 +473,12 @@
 			<Control ID="btnImport">导入</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmCheatDbList" Title="Select Game...">
+		<Form ID="frmCheatDbList" Title="选择游戏...">
 			<Control ID="lblSearch">搜索:</Control>
 			<Control ID="btnOK">导入作弊</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmCheatList" Title="Cheats">
+		<Form ID="frmCheatList" Title="作弊">
 			<Control ID="tabCheats">作弊</Control>
 			<Control ID="btnAddCheat">添加作弊</Control>
 			<Control ID="btnDeleteCheat">删除</Control>
@@ -471,7 +491,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmCheat" Title="Edit Cheat">
+		<Form ID="frmCheat" Title="编辑作弊">
 			<Control ID="lblDescription">描述:</Control>
 			<Control ID="grpCode">代码</Control>
 			<Control ID="radGameGenie">Game Genie (例如: A1B2-C3D4)</Control>
@@ -483,7 +503,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmAbout" Title="About - Mesen-S">
+		<Form ID="frmAbout" Title="关于 - Mesen-S">
 			<Control ID="labelProductName">Mesen-S</Control>
 			<Control ID="labelCopyright">© 2019 M. Bibaud (又名 Sour)</Control>
 			<Control ID="lblWebsite">网站:</Control>
@@ -497,17 +517,19 @@
 			<Control ID="lblVideo">视频:</Control>
 			<Control ID="lblAudio">音频:</Control>
 			<Control ID="lblEmulation">模拟:</Control>
+			<Control ID="ctrlLinkLabel15">SDD-1 解压缩 (Andreas Naive)</Control>
 			<Control ID="lblCheats">作弊:</Control>
+			<Control ID="lblCheatDatabase">Mighty Mo (作弊数据库)</Control>
 			<Control ID="lblSpecialThanks">感谢所有以任何方式做出贡献的人!(捐赠、错误报告、测试、信息共享等。)</Control>
 
 			<Control ID="lblDonate">如果您想要支持 Mesen-S, 请考虑进行捐赠。
 感谢您的支持!</Control>
 			<Control ID="okButton">确定(&amp;O)</Control>
 		</Form>
-		<Form ID="frmGameConfig" Title="Game Configuration">
+		<Form ID="frmGameConfig" Title="游戏配置">
 			<Control ID="grpDipSwitches">DIP 开关</Control>
 		</Form>
-		<Form ID="frmUpdatePrompt" Title="Mesen-S - Update Available">
+		<Form ID="frmUpdatePrompt" Title="Mesen-S - 有可用更新">
 			<Control ID="lblLatestVersion">最新版本:</Control>
 			<Control ID="lblCurrentVersion">当前版本:</Control>
 			<Control ID="lblChangeLog">更改日志:</Control>
@@ -515,12 +537,12 @@
 			<Control ID="btnUpdate">更新</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmSelectRom" Title="Select Rom...">
+		<Form ID="frmSelectRom" Title="选择 Rom...">
 			<Control ID="lblSearch">搜索:</Control>
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmGetKey" Title="Set key binding...">
+		<Form ID="frmGetKey" Title="设置按键绑定...">
 			<Control ID="lblSetKeyMessage">按键盘或控制器上的任意键来设置新绑定。</Control>
 		</Form>
 		<Form ID="frmPlayerProfile" Title="Profile">
@@ -528,7 +550,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmRecordAvi" Title="Video Recording Options">
+		<Form ID="frmRecordAvi" Title="录制视频选项">
 			<Control ID="lblAviFile">保存到:</Control>
 			<Control ID="lblCodec">视频编码:</Control>
 			<Control ID="lblCompressionLevel">压缩等级:</Control>
@@ -540,7 +562,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmHdPackEditor" Title="HD Pack Builder">
+		<Form ID="frmHdPackEditor" Title="HD 包生成器">
 			<Control ID="grpPreview">CHR Bank 预览</Control>
 			<Control ID="lblChrBank">CHR Bank:</Control>
 			<Control ID="grpOptions">录制选项</Control>
@@ -556,7 +578,7 @@
 			<Control ID="btnStopRecording">停止录制</Control>
 			<Control ID="btnOpenFolder">打开存档文件夹</Control>
 		</Form>
-		<Form ID="frmHistoryViewer" Title="History Viewer">
+		<Form ID="frmHistoryViewer" Title="历史查看器">
 			<Control ID="lblVolume">音量</Control>
 			<Control ID="mnuFile">文件</Control>
 			<Control ID="mnuImportMovie">导入影片</Control>
@@ -574,13 +596,13 @@
 			<Control ID="mnuScale5x">5x</Control>
 			<Control ID="mnuScale6x">6x</Control>
 		</Form>
-		<Form ID="frmSelectExportRange" Title="Export specific range...">
+		<Form ID="frmSelectExportRange" Title="导出指定范围...">
 			<Control ID="lblStartTime">开始时间:</Control>
 			<Control ID="lblEndTime">结束时间:</Control>
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmHelp" Title="Command-line options">
+		<Form ID="frmHelp" Title="命令行选项">
 			<Control ID="grpExample">使用示例</Control>
 			<Control ID="tpgGeneralOptions">常规</Control>
 			<Control ID="tpgVideoOptions">视频选项</Control>
@@ -588,10 +610,10 @@
 			<Control ID="tpgEmulationOptions">模拟选项</Control>
 			<Control ID="lblExplanation">这将以全屏模式启动 Mesen-S,并加载 "MyGame.nes" rom。它还将使用 NTSC 滤镜,设置为 2 倍放大并配置过扫描设置。 "DoNotSaveSetting" 标志用于防止命令行开关永久更改 Mesen-S 的设置。</Control>
 		</Form>
-		<Form ID="frmCopyFiles" Title="Please wait...">
+		<Form ID="frmCopyFiles" Title="请稍等...">
 			<Control ID="lblCopying">正在复制:</Control>
 		</Form>
-		<Form ID="frmConfigWizard" Title="Mesen-S - Configuration">
+		<Form ID="frmConfigWizard" Title="Mesen-S - 配置">
 			<Control ID="lblMesen">Mesen-S - SNES 模拟器</Control>
 			<Control ID="lblConfigWizard">配置向导</Control>
 			<Control ID="lblInitialSetup">请花一些时间完成 Mesen-S 的初始设置。</Control>
@@ -607,7 +629,7 @@
 			<Control ID="btnOk">确认</Control>
 			<Control ID="lblCancel">取消</Control>
 		</Form>
-		<Form ID="frmRecordMovie" Title="Movie Recording Options">
+		<Form ID="frmRecordMovie" Title="录制影片选项">
 			<Control ID="lblSaveTo">保存到:</Control>
 			<Control ID="lblRecordFrom">录制自:</Control>
 			<Control ID="lblMovieInformation">影片信息 (可选)</Control>
@@ -617,7 +639,7 @@
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
 		</Form>
-		<Form ID="frmInputBarCode" Title="Input Barcode...">
+		<Form ID="frmInputBarCode" Title="输入条码...">
 			<Control ID="lblBarcode">条码:</Control>
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
@@ -959,9 +981,9 @@
 			<Value ID="HQ2x">HQ 2x</Value>
 			<Value ID="HQ3x">HQ 3x</Value>
 			<Value ID="HQ4x">HQ 4x</Value>
-			<Value ID="Scale2x">放大 2x</Value>
-			<Value ID="Scale3x">Super Scope 3x</Value>
-			<Value ID="Scale4x">Super Scope 4x</Value>
+			<Value ID="Scale2x">超级放大 2x</Value>
+			<Value ID="Scale3x">超级放大 3x</Value>
+			<Value ID="Scale4x">超级放大 4x</Value>
 			<Value ID="_2xSai">2xSai</Value>
 			<Value ID="Super2xSai">Super2xSai</Value>
 			<Value ID="SuperEagle">SuperEagle</Value>
@@ -989,6 +1011,11 @@
 			<Value ID="Ukrainian">Українська</Value>
 			<Value ID="Catalan">Català</Value>
 			<Value ID="Chinese">简体中文</Value>
+		</Enum>
+		<Enum ID="ConsoleRegion">
+			<Value ID="Auto">自动</Value>
+			<Value ID="Ntsc">Ntsc</Value>
+			<Value ID="Pal">Pal</Value>
 		</Enum>
 		<Enum ID="RamState">
 			<Value ID="Random">随机值 (默认)</Value>
@@ -1106,6 +1133,9 @@
 			<Value ID="DmaRead">DMA 读取</Value>
 			<Value ID="DmaWrite">DMA 写入</Value>
 			<Value ID="DummyRead">空读取</Value>
+		</Enum>
+		<Enum ID="StatusFlagFormat">
+			<Value ID="Hexadecimal">十六进制</Value>
 		</Enum>
 	</Enums>
 </Resources>
