@@ -36,7 +36,12 @@ namespace Mesen.GUI.Config
 
 		public void ApplyConfig()
 		{
-			ConfigApi.SetGameboyConfig(this);
+			// I get the following error if I try to uncomment this call
+			// I don't think it's a huge deal since Sour is making a new GUI
+			//
+			// System.EntryPointNotFoundException: 'Unable to find an entry point named 'SetGameboyConfig' in DLL 'MesenSCore.dll'.'
+			//
+			//ConfigApi.SetGameboyConfig(this);
 		}
 	}
 
