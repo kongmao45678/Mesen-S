@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mesen.GUI.Config;
 using Mesen.GUI.Controls;
+using Mesen.GUI.Debugger;
 
 namespace Mesen.GUI.Forms
 {
@@ -132,6 +133,7 @@ namespace Mesen.GUI.Forms
 		private void chkHex_CheckedChanged(object sender, EventArgs e)
 		{
 			nudCurrentFilterValue.Hexadecimal = chkHex.Checked;
+			RefreshAddressList();
 		}
 
 		private void RefreshAddressList()
@@ -178,7 +180,7 @@ namespace Mesen.GUI.Forms
 					values.Add(memory[i]);
 				}
 			}
-			lstAddresses.SetData(values.ToArray(), _bitMode == BitMode.Bit8 ? 2 : 4, addresses.ToArray());
+			lstAddresses.SetData(values.ToArray(), _bitMode == BitMode.Bit8 ? 2 : 4, chkHex.Checked, addresses.ToArray());
 		}
 
 		private void btnReset_Click(object sender, EventArgs e)
@@ -216,13 +218,13 @@ namespace Mesen.GUI.Forms
 		private void UpdateUI()
 		{
 			btnUndo.Enabled = _filters.Count > 0;
-			chkPauseGameWhileWindowActive.Enabled = btnAddCurrentFilter.Enabled = btnAddPrevFilter.Enabled = btnReset.Enabled = cboCurrentFilterType.Enabled = cboPrevFilterType.Enabled = nudCurrentFilterValue.Enabled = EmuApi.IsRunning();
-			mnuCreateCheat.Enabled = btnCreateCheat.Enabled = lstAddresses.CurrentAddress.HasValue;
+			chkPauseGameWhileWindowActive.Enabled = btnAddCurrentFilter.Enabled = btnAddPrevFilter.Enabled = btnReset.Enabled = cboCurrentFilterType.Enabled = cboPrevFilterType.Enabled = nudCurrentFilterValue.Enabled = chkHex.Enabled = btn8Bit.Enabled = btn16Bit.Enabled = EmuApi.IsRunning();
+			mnuCreateCheat.Enabled = btnCreateCheat.Enabled = mnuAddWatch.Enabled = btnAddWatch.Enabled = lstAddresses.CurrentAddress.HasValue;
 
 			if(lstAddresses.CurrentAddress.HasValue) {
 				lblAddress.Visible = true;
 				lblAtAddress.Visible = true;
-				lblAddress.Text = "$" + lstAddresses.CurrentAddress?.ToString("X6");
+				lblAddress.Text = "$" + lstAddresses.CurrentAddress?.ToString("X5");
 			} else {
 				lblAddress.Visible = false;
 				lblAtAddress.Visible = false;
@@ -272,6 +274,24 @@ namespace Mesen.GUI.Forms
 					OnAddCheat?.Invoke(newCheat, new EventArgs());
 				}
 			}
+		}
+
+		private void btnAddWatch_Click(object sender, EventArgs e)
+		{
+			int addr = lstAddresses.CurrentAddress.Value;
+
+			// We're letting the adding with 0x7E0000 happen in the watch window,
+			// so that it's easier to see which WRAM value we're dealing with
+			string watch;
+			if(_bitMode == BitMode.Bit8) {
+				watch = "[$7E0000 + $" + addr.ToString("X5") + "]";
+			} else {
+				watch = "{$7E0000 + $" + addr.ToString("X5") + "}";
+			}
+			if(!chkHex.Checked)
+				watch += ",U";
+
+			WatchManager.GetWatchManager(CpuType.Cpu).AddWatch(watch);
 		}
 
 		private void chkPauseGameWhileWindowActive_CheckedChanged(object sender, EventArgs e)

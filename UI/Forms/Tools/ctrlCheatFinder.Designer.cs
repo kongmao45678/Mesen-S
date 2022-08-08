@@ -47,7 +47,9 @@ namespace Mesen.GUI.Forms
 			this.lstAddresses = new Mesen.GUI.Debugger.Controls.ctrlAddressList();
 			this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.mnuCreateCheat = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuAddWatch = new System.Windows.Forms.ToolStripMenuItem();
 			this.btnCreateCheat = new System.Windows.Forms.Button();
+			this.btnAddWatch = new System.Windows.Forms.Button();
 			this.lblAtAddress = new System.Windows.Forms.Label();
 			this.lblAddress = new System.Windows.Forms.Label();
 			this.chkPauseGameWhileWindowActive = new System.Windows.Forms.CheckBox();
@@ -185,7 +187,7 @@ namespace Mesen.GUI.Forms
 			// 
 			this.chkHex.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.chkHex.Name = "chkHex";
-			this.chkHex.Checked = false;
+			this.chkHex.Checked = true;
 			this.chkHex.Text = "Hex";
 			this.chkHex.TabIndex = 1;
 			this.chkHex.CheckedChanged += chkHex_CheckedChanged;
@@ -284,7 +286,7 @@ namespace Mesen.GUI.Forms
 			// contextMenuStrip
 			// 
 			this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuCreateCheat});
+            this.mnuCreateCheat, this.mnuAddWatch});
 			this.contextMenuStrip.Name = "contextMenuStrip";
 			this.contextMenuStrip.Size = new System.Drawing.Size(143, 26);
 			this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
@@ -294,7 +296,16 @@ namespace Mesen.GUI.Forms
 			this.mnuCreateCheat.Name = "mnuCreateCheat";
 			this.mnuCreateCheat.Size = new System.Drawing.Size(142, 22);
 			this.mnuCreateCheat.Text = "Create Cheat";
+			this.mnuCreateCheat.Image = global::Mesen.GUI.Properties.Resources.CheatCode;
 			this.mnuCreateCheat.Click += new System.EventHandler(this.btnCreateCheat_Click);
+			// 
+			// mnuAddWatch
+			// 
+			this.mnuAddWatch.Name = "mnuAddWatch";
+			this.mnuAddWatch.Size = new System.Drawing.Size(142, 22);
+			this.mnuAddWatch.Text = "Add to Watch";
+			this.mnuAddWatch.Image = global::Mesen.GUI.Properties.Resources.Find;
+			this.mnuAddWatch.Click += new System.EventHandler(this.btnAddWatch_Click);
 			// 
 			// btnCreateCheat
 			// 
@@ -306,6 +317,16 @@ namespace Mesen.GUI.Forms
 			this.btnCreateCheat.UseVisualStyleBackColor = true;
 			this.btnCreateCheat.Click += new System.EventHandler(this.btnCreateCheat_Click);
 			// 
+			// btnAddWatch
+			// 
+			this.btnAddWatch.Location = new System.Drawing.Point(3, 3);
+			this.btnAddWatch.Name = "btnAddWatch";
+			this.btnAddWatch.Size = new System.Drawing.Size(85, 22);
+			this.btnAddWatch.TabIndex = 6;
+			this.btnAddWatch.Text = "Add to Watch";
+			this.btnAddWatch.UseVisualStyleBackColor = true;
+			this.btnAddWatch.Click += new System.EventHandler(this.btnAddWatch_Click);
+			// 
 			// lblAtAddress
 			// 
 			this.lblAtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -313,7 +334,7 @@ namespace Mesen.GUI.Forms
 			this.lblAtAddress.Location = new System.Drawing.Point(94, 7);
 			this.lblAtAddress.Name = "lblAtAddress";
 			this.lblAtAddress.Size = new System.Drawing.Size(16, 13);
-			this.lblAtAddress.TabIndex = 6;
+			this.lblAtAddress.TabIndex = 7;
 			this.lblAtAddress.Text = "at";
 			// 
 			// lblAddress
@@ -323,7 +344,7 @@ namespace Mesen.GUI.Forms
 			this.lblAddress.Location = new System.Drawing.Point(116, 7);
 			this.lblAddress.Name = "lblAddress";
 			this.lblAddress.Size = new System.Drawing.Size(37, 13);
-			this.lblAddress.TabIndex = 7;
+			this.lblAddress.TabIndex = 8;
 			this.lblAddress.Text = "$0000";
 			// 
 			// chkPauseGameWhileWindowActive
@@ -367,13 +388,15 @@ namespace Mesen.GUI.Forms
 			this.tableLayoutPanel3.Controls.Add(this.lblAddress, 2, 0);
 			this.tableLayoutPanel3.Controls.Add(this.btnCreateCheat, 0, 0);
 			this.tableLayoutPanel3.Controls.Add(this.lblAtAddress, 1, 0);
+			this.tableLayoutPanel3.Controls.Add(this.btnAddWatch, 0, 1);
 			this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel3.Location = new System.Drawing.Point(405, 168);
 			this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-			this.tableLayoutPanel3.RowCount = 1;
+			this.tableLayoutPanel3.RowCount = 2;
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(160, 28);
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(160, 60);
 			this.tableLayoutPanel3.TabIndex = 7;
 			// 
 			// ctrlCheatFinder
@@ -416,12 +439,14 @@ namespace Mesen.GUI.Forms
 		private System.Windows.Forms.Button btnAddCurrentFilter;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button btnCreateCheat;
+		private System.Windows.Forms.Button btnAddWatch;
 		private System.Windows.Forms.Label lblPreviousValue;
 		private System.Windows.Forms.Label lblCurrentValue;
 		private System.Windows.Forms.Label lblAtAddress;
 		private System.Windows.Forms.Label lblAddress;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
 		private System.Windows.Forms.ToolStripMenuItem mnuCreateCheat;
+		private System.Windows.Forms.ToolStripMenuItem mnuAddWatch;
 		private System.Windows.Forms.CheckBox chkPauseGameWhileWindowActive;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 		private System.Windows.Forms.RadioButton btn8Bit;

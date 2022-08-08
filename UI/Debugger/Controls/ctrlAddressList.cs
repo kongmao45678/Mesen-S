@@ -40,10 +40,10 @@ namespace Mesen.GUI.Debugger.Controls
 		public int AddressSize { set { this.ctrlDataViewer.AddressSize = value; } }
 		public int MarginWidth { set { this.ctrlDataViewer.MarginWidth = value; } }
 
-		public void SetData(int[] values, int padding, int[] addresses)
+		public void SetData(int[] values, int padding, bool hex, int[] addresses)
 		{
 			this.ctrlDataViewer.DataProvider = new TraceLoggerCodeDataProvider(
-				values.Select((v) => v.ToString("X" + padding.ToString())).ToList(),
+				values.Select((v) => hex ? "$" + v.ToString("X" + padding.ToString()) : v.ToString()).ToList(),
 				addresses.ToList(),
 				values.Select((v) => "").ToList(),
 				addresses.Select((a) => 0).ToList()
