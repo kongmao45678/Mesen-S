@@ -30,7 +30,13 @@ namespace Mesen.GUI.Forms
 			}
 		}
 
-		private List<byte[]> _memorySnapshots;
+		private enum BitMode {
+			Bit8,
+			Bit16
+		}
+		private BitMode _bitMode = BitMode.Bit8;
+
+		private List<int[]> _memorySnapshots;
 		private List<FilterInfo> _filters;
 		private bool _tabIsFocused = false;
 		
@@ -67,7 +73,8 @@ namespace Mesen.GUI.Forms
 			cboCurrentFilterType.SelectedIndex = 0;
 
 			btnUndo.Enabled = false;
-
+			
+			lstAddresses.SelectedLineChanged += lstAddresses_SelectedLineChanged;
 			lstAddresses.AddressSize = 5;
 			lstAddresses.MarginWidth = 6;
 
@@ -80,7 +87,7 @@ namespace Mesen.GUI.Forms
 		private void Reset()
 		{
 			_filters = new List<FilterInfo>();
-			_memorySnapshots = new List<byte[]>();
+			_memorySnapshots = new List<int[]>();
 			TakeSnapshot();
 		}
 
@@ -91,7 +98,15 @@ namespace Mesen.GUI.Forms
 			}
 
 			byte[] memory = GetSnapshot();
-			_memorySnapshots.Add(memory);
+			if(_bitMode == BitMode.Bit8) {
+				_memorySnapshots.Add(memory.Select((b) => (int)b).ToArray());
+			} else {
+				// Note the endianness
+				List<int> pairs = new List<int>(memory.Length - 1);
+				for(int i = 0; i < memory.Length - 1; ++i)
+					pairs.Add((int)memory[i + 1] * 256 + (int)memory[i]);
+				_memorySnapshots.Add(pairs.ToArray());
+			}
 			RefreshAddressList();
 
 			UpdateUI();
@@ -109,6 +124,16 @@ namespace Mesen.GUI.Forms
 			}
 		}
 
+		private void lstAddresses_SelectedLineChanged(object sender, EventArgs e)
+		{
+			UpdateUI();
+		}
+
+		private void chkHex_CheckedChanged(object sender, EventArgs e)
+		{
+			nudCurrentFilterValue.Hexadecimal = chkHex.Checked;
+		}
+
 		private void RefreshAddressList()
 		{
 			UpdateUI();
@@ -116,8 +141,9 @@ namespace Mesen.GUI.Forms
 				return;
 			}
 
+			int[] memory = _memorySnapshots[_memorySnapshots.Count - 1];
 			HashSet<int> matchingAddresses = new HashSet<int>();
-			for(int i = 0; i < 0x20000; i++) {
+			for(int i = 0; i < memory.Length; i++) {
 				matchingAddresses.Add(i);
 			}
 
@@ -144,16 +170,15 @@ namespace Mesen.GUI.Forms
 				}
 			}
 
-			byte[] memory = GetSnapshot();
-			List<byte> values = new List<byte>(0x20000);
-			List<int> addresses = new List<int>(0x20000);
-			for(int i = 0; i < 0x20000; i++) {
+			List<int> values = new List<int>(memory.Length);
+			List<int> addresses = new List<int>(memory.Length);
+			for(int i = 0; i < memory.Length; i++) {
 				if(matchingAddresses.Contains(i)) {
 					addresses.Add(i);
 					values.Add(memory[i]);
 				}
 			}
-			lstAddresses.SetData(values.ToArray(), addresses.ToArray());
+			lstAddresses.SetData(values.ToArray(), _bitMode == BitMode.Bit8 ? 2 : 4, addresses.ToArray());
 		}
 
 		private void btnReset_Click(object sender, EventArgs e)
@@ -166,8 +191,26 @@ namespace Mesen.GUI.Forms
 			if(_filters.Count > 0) {
 				_filters.RemoveAt(_filters.Count-1);
 				_memorySnapshots.RemoveAt(_memorySnapshots.Count-1);
-				UpdateUI();
+				RefreshAddressList();
 			}
+		}
+
+		private void btn8Bit_Click(object sender, EventArgs e)
+		{
+			_bitMode = BitMode.Bit8;
+			selectedBitButton.Checked = false;
+			selectedBitButton = (System.Windows.Forms.RadioButton)sender;
+			selectedBitButton.Checked = true;
+			Reset();
+		}
+
+		private void btn16Bit_Click(object sender, EventArgs e)
+		{
+			_bitMode = BitMode.Bit16;
+			selectedBitButton.Checked = false;
+			selectedBitButton = (System.Windows.Forms.RadioButton)sender;
+			selectedBitButton.Checked = true;
+			Reset();
 		}
 
 		private void UpdateUI()
@@ -206,15 +249,24 @@ namespace Mesen.GUI.Forms
 		private void btnCreateCheat_Click(object sender, EventArgs e)
 		{
 			RomInfo romInfo = EmuApi.GetRomInfo();
-			uint addr = (uint)lstAddresses.CurrentAddress.Value;
-			uint val = lstAddresses.CurrentValue.Value;
+			int addr = lstAddresses.CurrentAddress.Value;
+			int val = lstAddresses.CurrentValue.Value;
+
+			string codes;
+			if(_bitMode == BitMode.Bit8) {
+				codes = ((0x7E0000 + addr) * 256 + val).ToString("X8");
+			} else {
+				codes = ((0x7E0000 + addr) * 256 + val % 256).ToString("X8");
+				codes += "\n";
+				codes += ((0x7E0000 + addr + 1) * 256 + val / 256).ToString("X8");
+			}
+
 			CheatCode newCheat = new CheatCode {
 				Description = romInfo.GetRomName(),
 				Format = CheatFormat.ProActionReplay,
 				Enabled = true,
-				Codes = ((0x7E0000 + addr) * 256 + val).ToString("X8")
+				Codes = codes
 			};
-
 			using(frmCheat frm = new frmCheat(newCheat)) {
 				if(frm.ShowDialog() == DialogResult.OK) {
 					OnAddCheat?.Invoke(newCheat, new EventArgs());

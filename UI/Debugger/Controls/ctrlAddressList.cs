@@ -16,7 +16,7 @@ namespace Mesen.GUI.Debugger.Controls
 	public partial class ctrlAddressList : BaseScrollableTextboxUserControl
 	{
 		private int[] _addresses;
-		private byte[] _values;
+		private int[] _values;
 
 		public ctrlAddressList()
 		{
@@ -28,13 +28,22 @@ namespace Mesen.GUI.Debugger.Controls
 			get { return this.ctrlDataViewer; }
 		}
 
+		public event EventHandler SelectedLineChanged {
+			add {
+				this.ctrlDataViewer.SelectedLineChanged += value;
+			}
+			remove {
+				this.ctrlDataViewer.SelectedLineChanged -= value;
+			}
+		}
+
 		public int AddressSize { set { this.ctrlDataViewer.AddressSize = value; } }
 		public int MarginWidth { set { this.ctrlDataViewer.MarginWidth = value; } }
 
-		public void SetData(byte[] values, int[] addresses)
+		public void SetData(int[] values, int padding, int[] addresses)
 		{
 			this.ctrlDataViewer.DataProvider = new TraceLoggerCodeDataProvider(
-				values.Select((v) => v.ToString("X2")).ToList(),
+				values.Select((v) => v.ToString("X" + padding.ToString())).ToList(),
 				addresses.ToList(),
 				values.Select((v) => "").ToList(),
 				addresses.Select((a) => 0).ToList()
@@ -47,7 +56,7 @@ namespace Mesen.GUI.Debugger.Controls
 		{
 			get
 			{
-				if(_addresses?.Length > 0) {
+				if(this._addresses?.Length > 0 && this.ctrlDataViewer.SelectedLine >= 0) {
 					return _addresses[_addresses.Length - this.ctrlDataViewer.SelectedLine - 1];
 				} else {
 					return null;
@@ -55,11 +64,11 @@ namespace Mesen.GUI.Debugger.Controls
 			}
 		}
 
-		public byte? CurrentValue
+		public int? CurrentValue
 		{
 			get
 			{
-				if(_addresses?.Length > 0) {
+				if(this._values?.Length > 0 && this.ctrlDataViewer.SelectedLine >= 0) {
 					return _values[_values.Length - this.ctrlDataViewer.SelectedLine - 1];
 				} else {
 					return null;

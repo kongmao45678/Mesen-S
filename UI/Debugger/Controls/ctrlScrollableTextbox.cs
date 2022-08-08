@@ -116,6 +116,15 @@ namespace Mesen.GUI.Debugger.Controls
 			this.vScrollBar.Invalidate();
 		}
 
+		public event EventHandler SelectedLineChanged {
+			add {
+				this.ctrlTextbox.SelectedLineChanged += value;
+			}
+			remove {
+				this.ctrlTextbox.SelectedLineChanged -= value;
+			}
+		}
+
 		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 		public Font BaseFont
 		{

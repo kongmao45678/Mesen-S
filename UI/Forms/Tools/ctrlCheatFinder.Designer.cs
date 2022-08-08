@@ -38,6 +38,7 @@ namespace Mesen.GUI.Forms
 			this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
 			this.lblCurrentValue = new System.Windows.Forms.Label();
 			this.cboCurrentFilterType = new System.Windows.Forms.ComboBox();
+			this.chkHex = new System.Windows.Forms.CheckBox();
 			this.nudCurrentFilterValue = new System.Windows.Forms.NumericUpDown();
 			this.btnAddCurrentFilter = new System.Windows.Forms.Button();
 			this.btnReset = new System.Windows.Forms.Button();
@@ -51,6 +52,8 @@ namespace Mesen.GUI.Forms
 			this.lblAddress = new System.Windows.Forms.Label();
 			this.chkPauseGameWhileWindowActive = new System.Windows.Forms.CheckBox();
 			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+			this.btn8Bit = new System.Windows.Forms.RadioButton();
+			this.btn16Bit = new System.Windows.Forms.RadioButton();
 			this.grpFilters.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.flowLayoutPanel1.SuspendLayout();
@@ -84,10 +87,13 @@ namespace Mesen.GUI.Forms
 			this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel4, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.btnReset, 0, 0);
 			this.tableLayoutPanel2.Controls.Add(this.btnUndo, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.btn8Bit, 0, 4);
+			this.tableLayoutPanel2.Controls.Add(this.btn16Bit, 1, 4);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 4;
+			this.tableLayoutPanel2.RowCount = 5;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -147,6 +153,7 @@ namespace Mesen.GUI.Forms
 			this.flowLayoutPanel4.Controls.Add(this.cboCurrentFilterType);
 			this.flowLayoutPanel4.Controls.Add(this.nudCurrentFilterValue);
 			this.flowLayoutPanel4.Controls.Add(this.btnAddCurrentFilter);
+			this.flowLayoutPanel4.Controls.Add(this.chkHex);
 			this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 29);
 			this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -174,6 +181,15 @@ namespace Mesen.GUI.Forms
 			this.cboCurrentFilterType.Size = new System.Drawing.Size(110, 21);
 			this.cboCurrentFilterType.TabIndex = 0;
 			// 
+			// chkHex
+			// 
+			this.chkHex.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.chkHex.Name = "chkHex";
+			this.chkHex.Checked = false;
+			this.chkHex.Text = "Hex";
+			this.chkHex.TabIndex = 1;
+			this.chkHex.CheckedChanged += chkHex_CheckedChanged;
+			// 
 			// nudCurrentFilterValue
 			// 
 			this.nudCurrentFilterValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -186,7 +202,7 @@ namespace Mesen.GUI.Forms
 			this.nudCurrentFilterValue.Location = new System.Drawing.Point(202, 4);
 			this.nudCurrentFilterValue.Margin = new System.Windows.Forms.Padding(0);
 			this.nudCurrentFilterValue.Maximum = new decimal(new int[] {
-            255,
+            65535,
             0,
             0,
             0});
@@ -198,8 +214,8 @@ namespace Mesen.GUI.Forms
             0});
 			this.nudCurrentFilterValue.MinimumSize = new System.Drawing.Size(0, 21);
 			this.nudCurrentFilterValue.Name = "nudCurrentFilterValue";
-			this.nudCurrentFilterValue.Size = new System.Drawing.Size(41, 21);
-			this.nudCurrentFilterValue.TabIndex = 1;
+			this.nudCurrentFilterValue.Size = new System.Drawing.Size(61, 21);
+			this.nudCurrentFilterValue.TabIndex = 2;
 			this.nudCurrentFilterValue.Value = new decimal(new int[] {
             0,
             0,
@@ -212,7 +228,7 @@ namespace Mesen.GUI.Forms
 			this.btnAddCurrentFilter.Location = new System.Drawing.Point(246, 3);
 			this.btnAddCurrentFilter.Name = "btnAddCurrentFilter";
 			this.btnAddCurrentFilter.Size = new System.Drawing.Size(75, 23);
-			this.btnAddCurrentFilter.TabIndex = 2;
+			this.btnAddCurrentFilter.TabIndex = 3;
 			this.btnAddCurrentFilter.Text = "Add Filter";
 			this.btnAddCurrentFilter.UseVisualStyleBackColor = true;
 			this.btnAddCurrentFilter.Click += new System.EventHandler(this.btnAddCurrentFilter_Click);
@@ -322,6 +338,25 @@ namespace Mesen.GUI.Forms
 			this.chkPauseGameWhileWindowActive.UseVisualStyleBackColor = true;
 			this.chkPauseGameWhileWindowActive.CheckedChanged += new System.EventHandler(this.chkPauseGameWhileWindowActive_CheckedChanged);
 			// 
+			// btn8Bit
+			// 
+			this.btn8Bit.Name = "btn8Bit";
+			this.btn8Bit.TabIndex = 14;
+			this.btn8Bit.Text = "8-bit";
+			this.btn8Bit.UseVisualStyleBackColor = true;
+			this.btn8Bit.Click += new System.EventHandler(this.btn8Bit_Click);
+			this.btn8Bit.Checked = true;
+			this.selectedBitButton = this.btn8Bit;
+			// 
+			// btn16Bit
+			// 
+			this.btn16Bit.Name = "btn16Bit";
+			this.btn16Bit.TabIndex = 15;
+			this.btn16Bit.Text = "16-bit";
+			this.btn16Bit.UseVisualStyleBackColor = true;
+			this.btn16Bit.Click += new System.EventHandler(this.btn16Bit_Click);
+			this.btn16Bit.Checked = false;
+			// 
 			// tableLayoutPanel3
 			// 
 			this.tableLayoutPanel3.ColumnCount = 4;
@@ -376,6 +411,7 @@ namespace Mesen.GUI.Forms
 		private System.Windows.Forms.Button btnAddPrevFilter;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
 		private System.Windows.Forms.ComboBox cboCurrentFilterType;
+		private System.Windows.Forms.CheckBox chkHex;
 		private System.Windows.Forms.NumericUpDown nudCurrentFilterValue;
 		private System.Windows.Forms.Button btnAddCurrentFilter;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -388,5 +424,8 @@ namespace Mesen.GUI.Forms
 		private System.Windows.Forms.ToolStripMenuItem mnuCreateCheat;
 		private System.Windows.Forms.CheckBox chkPauseGameWhileWindowActive;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+		private System.Windows.Forms.RadioButton btn8Bit;
+		private System.Windows.Forms.RadioButton btn16Bit;
+		private System.Windows.Forms.RadioButton selectedBitButton;
 	}
 }
