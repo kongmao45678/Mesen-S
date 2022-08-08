@@ -611,6 +611,9 @@
     <Compile Include="Controls\ctrlTrackbar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Debugger\Controls\BaseScrollableTextboxUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\ctrlTrackbar.Designer.cs">
       <DependentUpon>ctrlTrackbar.cs</DependentUpon>
     </Compile>
@@ -948,6 +951,18 @@
     </Compile>
     <Compile Include="Forms\Tools\frmCheat.Designer.cs">
       <DependentUpon>frmCheat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\ctrlCheatFinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\ctrlCheatFinder.Designer.cs">
+      <DependentUpon>ctrlCheatFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger\Controls\ctrlAddressList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debugger\Controls\ctrlAddressList.Designer.cs">
+      <DependentUpon>ctrlAddressList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tools\frmCheatDbList.cs">
       <SubType>Form</SubType>
