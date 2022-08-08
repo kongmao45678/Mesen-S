@@ -47,7 +47,7 @@ namespace Mesen.GUI.Debugger.Controls
 		{
 			get
 			{
-				if(this._addresses?.Length > 0 && this.ctrlDataViewer.SelectedLine >= 0) {
+				if(this._addresses?.Length > 0 && this.ctrlDataViewer.SelectedLine >= 0 && this.ctrlDataViewer.SelectedLine < this._addresses.Length) {
 					return _addresses[_addresses.Length - this.ctrlDataViewer.SelectedLine - 1];
 				} else {
 					return null;
@@ -59,7 +59,7 @@ namespace Mesen.GUI.Debugger.Controls
 		{
 			get
 			{
-				if(this._values?.Length > 0 && this.ctrlDataViewer.SelectedLine >= 0) {
+				if(this._values?.Length > 0 && this.ctrlDataViewer.SelectedLine >= 0 && this.ctrlDataViewer.SelectedLine < this._values.Length) {
 					return _values[_values.Length - this.ctrlDataViewer.SelectedLine - 1];
 				} else {
 					return null;
