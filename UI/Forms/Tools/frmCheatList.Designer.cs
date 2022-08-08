@@ -81,6 +81,7 @@ namespace Mesen.GUI.Forms
 			this.tabMain.Name = "tabMain";
 			this.tabMain.SelectedIndex = 0;
 			this.tabMain.Size = new System.Drawing.Size(446, 324);
+			this.tabMain.SelectedIndexChanged += tabMain_SelectedIndexChanged;
 			this.tabMain.TabIndex = 0;
 			// 
 			// tabCheats
