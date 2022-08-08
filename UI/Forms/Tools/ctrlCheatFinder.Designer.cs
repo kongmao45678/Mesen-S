@@ -24,6 +24,9 @@ namespace Mesen.GUI.Forms
 		/// <summary> 
 		/// Required method for Designer support - do not modify 
 		/// the contents of this method with the code editor.
+		///
+		/// Despite warnings, this method was changed manually :),
+		/// get rekt Designer.
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -190,6 +193,7 @@ namespace Mesen.GUI.Forms
 			this.chkHex.Checked = true;
 			this.chkHex.Text = "Hex";
 			this.chkHex.TabIndex = 1;
+			this.chkHex.Size = new System.Drawing.Size(40, 21);
 			this.chkHex.CheckedChanged += chkHex_CheckedChanged;
 			// 
 			// nudCurrentFilterValue
@@ -345,7 +349,7 @@ namespace Mesen.GUI.Forms
 			this.lblAddress.Name = "lblAddress";
 			this.lblAddress.Size = new System.Drawing.Size(37, 13);
 			this.lblAddress.TabIndex = 8;
-			this.lblAddress.Text = "$0000";
+			this.lblAddress.Text = "$00000";
 			// 
 			// chkPauseGameWhileWindowActive
 			// 

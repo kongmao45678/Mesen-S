@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mesen.GUI.Config;
 using Mesen.GUI.Controls;
@@ -31,7 +28,8 @@ namespace Mesen.GUI.Forms
 			}
 		}
 
-		private enum BitMode {
+		private enum BitMode
+	  	{
 			Bit8,
 			Bit16
 		}
@@ -180,7 +178,7 @@ namespace Mesen.GUI.Forms
 					values.Add(memory[i]);
 				}
 			}
-			lstAddresses.SetData(values.ToArray(), _bitMode == BitMode.Bit8 ? 2 : 4, chkHex.Checked, addresses.ToArray());
+			lstAddresses.SetData(values.ToArray(), addresses.ToArray(), chkHex.Checked, _bitMode == BitMode.Bit8 ? 2 : 4);
 		}
 
 		private void btnReset_Click(object sender, EventArgs e)
@@ -258,6 +256,7 @@ namespace Mesen.GUI.Forms
 			if(_bitMode == BitMode.Bit8) {
 				codes = ((0x7E0000 + addr) * 256 + val).ToString("X8");
 			} else {
+				// Note the endianness
 				codes = ((0x7E0000 + addr) * 256 + val % 256).ToString("X8");
 				codes += "\n";
 				codes += ((0x7E0000 + addr + 1) * 256 + val / 256).ToString("X8");

@@ -1,5 +1,3 @@
-using Mesen.GUI.Debugger.Controls;
-
 namespace Mesen.GUI.Debugger.Controls
 {
 	partial class ctrlAddressList
@@ -26,6 +24,9 @@ namespace Mesen.GUI.Debugger.Controls
 		/// <summary> 
 		/// Required method for Designer support - do not modify 
 		/// the contents of this method with the code editor.
+		///
+		/// Despite warnings, this method was changed manually :),
+		/// get rekt Designer.
 		/// </summary>
 		private void InitializeComponent()
 		{

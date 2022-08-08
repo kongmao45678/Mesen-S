@@ -1,15 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Mesen.GUI.Config;
-using Mesen.GUI.Controls;
-using Mesen.GUI.Debugger.Code;
 
 namespace Mesen.GUI.Debugger.Controls
 {
@@ -40,7 +31,7 @@ namespace Mesen.GUI.Debugger.Controls
 		public int AddressSize { set { this.ctrlDataViewer.AddressSize = value; } }
 		public int MarginWidth { set { this.ctrlDataViewer.MarginWidth = value; } }
 
-		public void SetData(int[] values, int padding, bool hex, int[] addresses)
+		public void SetData(int[] values,int[] addresses, bool hex, int padding = -1)
 		{
 			this.ctrlDataViewer.DataProvider = new TraceLoggerCodeDataProvider(
 				values.Select((v) => hex ? "$" + v.ToString("X" + padding.ToString()) : v.ToString()).ToList(),
