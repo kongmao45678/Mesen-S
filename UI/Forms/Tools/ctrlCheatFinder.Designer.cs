@@ -222,6 +222,7 @@ namespace Mesen.GUI.Forms
 			this.nudCurrentFilterValue.Name = "nudCurrentFilterValue";
 			this.nudCurrentFilterValue.Size = new System.Drawing.Size(61, 21);
 			this.nudCurrentFilterValue.TabIndex = 2;
+			this.nudCurrentFilterValue.Hexadecimal = true;
 			this.nudCurrentFilterValue.Value = new decimal(new int[] {
             0,
             0,
