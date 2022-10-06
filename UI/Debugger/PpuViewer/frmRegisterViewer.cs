@@ -99,9 +99,17 @@ namespace Mesen.GUI.Debugger
 				tabMain.SelectedTab = tpgCpu;
 			}
 
-			if(_coprocessorType == CoprocessorType.SA1 || _coprocessorType == CoprocessorType.Gameboy || _coprocessorType == CoprocessorType.SGB) {
+			if(_coprocessorType == CoprocessorType.SA1 || 
+				_coprocessorType == CoprocessorType.Gameboy ||
+				_coprocessorType == CoprocessorType.SGB ||
+				_coprocessorType == CoprocessorType.GSU
+				) {
 				tpgCoprocessor = new TabPage();
-				tpgCoprocessor.Text = _coprocessorType == CoprocessorType.SA1 ? "SA-1" : "Gameboy";
+				switch (_coprocessorType) {
+					case CoprocessorType.Gameboy: tpgCoprocessor.Text = "Gameboy"; break;
+					case CoprocessorType.SA1: tpgCoprocessor.Text = "SA-1"; break;
+					case CoprocessorType.GSU: tpgCoprocessor.Text = "GSU"; break;
+				}
 				ctrlCoprocessor = new ctrlPropertyList();
 				ctrlCoprocessor.Dock = DockStyle.Fill;
 				tpgCoprocessor.Controls.Add(ctrlCoprocessor);
@@ -154,10 +162,13 @@ namespace Mesen.GUI.Debugger
 			} else if(tabMain.SelectedTab == tpgPpu) {
 				UpdatePpuTab();
 			} else if(tabMain.SelectedTab == tpgCoprocessor) {
-				if(_coprocessorType == CoprocessorType.SA1) {
-					UpdateSa1Tab();
-				} else if(_coprocessorType == CoprocessorType.Gameboy || _coprocessorType == CoprocessorType.SGB) {
-					UpdateGameboyTab();
+				switch (_coprocessorType) {
+					case CoprocessorType.Gameboy:
+					case CoprocessorType.SGB:
+						UpdateGameboyTab(); 
+						break;
+					case CoprocessorType.SA1: UpdateSa1Tab(); break;
+					case CoprocessorType.GSU: UpdateGSUTab(); break;
 				}
 			}
 		}
@@ -843,6 +854,70 @@ namespace Mesen.GUI.Debugger
 				new RegEntry("$421C/D", "P3 Data", regs.ControllerData[2], Format.X16),
 				new RegEntry("$421E/F", "P4 Data", regs.ControllerData[3], Format.X16),
 			});
+		}
+
+		private void UpdateGSUTab()
+		{
+			GsuState regs = _state.Gsu;
+			List<RegEntry> entries = new List<RegEntry>() {
+				new RegEntry("", "Memory banks for GSU opcode/data accesses", null),
+				new RegEntry("$3033", "BRAMR - Back-up RAM Register", regs.BackupRamEnabled ? "Enable" : "Disable/Protect"),
+                new RegEntry("$3034", "PBR - Program Bank Register", regs.ProgramBank, Format.X8),
+				new RegEntry("$3036", "ROMBR - Game Pak ROM Bank Register", regs.RomBank, Format.X8),
+				new RegEntry("$303C", "RAMBR - Game Pak RAM Bank Register", regs.RamBank, Format.X8),
+
+				new RegEntry("$3037", "CFGR", null),
+				new RegEntry("$3037.5", "MS0 - Multiplier speed", regs.HighSpeedMode ? "High speed mode" : "Standard"),
+				new RegEntry("$3037.7", "IRQ - Interrupt mask", regs.IrqDisabled ? "Disable IRQ" : "Trigger IRQ on STOP"),
+
+				new RegEntry("$3038", "SCBR", null),
+				new RegEntry("$3038", "Screen Base", 0x700000 | regs.ScreenBase * 0x400, Format.X24),
+
+				new RegEntry("$3039", "CLSR", null),
+				new RegEntry("$3039.0", "Clock Select", regs.ClockSelect ? "21.4MHz" : "10.7MHz"),
+
+				new RegEntry("$303A", "SCMR - Screen Mode Register", null),
+				new RegEntry("$303A.0-1", "MD0-1 - Color gradient", GetColorGradient(regs.ColorGradient)),
+				new RegEntry("$303A.2/5", "HT0/1 Screen height", GetScreenHeight(regs.ScreenHeight)),
+				new RegEntry("$303A.3", "RAN - Game Pak RAM bus access", regs.GsuRamAccess ? "GSU" : "SNES"),
+				new RegEntry("$303A.4", "RON - Game Pak ROM bus access", regs.GsuRomAccess ? "GSU" : "SNES"),
+
+				new RegEntry("N/A", "CMODE - Plot option register", null),
+				new RegEntry("0", "PLOT Transparent", regs.PlotTransparent ? "Plot color 0" : "Do not plot color 0"),
+				new RegEntry("1", "PLOT Dither", regs.PlotDither ? "Dither" : "Normal"),
+				new RegEntry("2", "COLOR/GETC High-Nibble", regs.ColorHighNibble ? "Replace incoming LSB by incoming MSB" : "Normal"),
+				new RegEntry("3", "COLOR/GETC Freeze-High", regs.ColorFreezeHigh ? "Write-protect COLOR.MSB" : "Normal"),
+				new RegEntry("4", "OBJ Mode", regs.ObjMode ? "Force OBJ mode (ignore SCMR.HT0/HT1" : "Normal"),
+
+				new RegEntry("N/A", "COLR - Color register", null),
+				new RegEntry("0-7", "Color Data", regs.ColorReg, Format.X8),
+			};
+
+			ctrlCoprocessor.UpdateState(entries);
+		}
+
+		private string GetColorGradient(byte gradient)
+		{
+			switch (gradient)
+			{
+				case 0: return "4 colors";
+				case 1: return "16 colors";
+				case 2: return "Reserved";
+				case 3: return "256 colors";
+				default: return "";
+			}
+		}
+
+		private string GetScreenHeight(byte screenHeight)
+        {
+			switch(screenHeight)
+            {
+				case 0: return "128 pixels";
+				case 1: return "160 pixels";
+				case 2: return "192 pixels";
+				case 3: return "OBJ mode";
+				default: return "";
+			}
 		}
 
 		private string GetTimerFrequency(double baseFreq, int divider)
