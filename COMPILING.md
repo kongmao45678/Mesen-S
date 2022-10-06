@@ -5,10 +5,9 @@ Note: to debug the C++ code, go to `UI`'s properties, tick `Debug >  Debugger en
 #### *Standalone*
 
 1) Open the solution in Visual Studio 2019
-2) Set "UI" as the Startup Project
-3) Compile as Release/x64
-4) Run the project from Visual Studio
-5) If you got an error, try running it a second time
+2) Compile as Release/x64
+3) Run the project from Visual Studio
+4) If you got an error, try running it a second time
 
 #### *Libretro*
 
