@@ -102,8 +102,7 @@ namespace Mesen.GUI.Debugger
 			if(_coprocessorType == CoprocessorType.SA1 || 
 				_coprocessorType == CoprocessorType.Gameboy ||
 				_coprocessorType == CoprocessorType.SGB ||
-				_coprocessorType == CoprocessorType.GSU
-				) {
+				_coprocessorType == CoprocessorType.GSU) {
 				tpgCoprocessor = new TabPage();
 				switch (_coprocessorType) {
 					case CoprocessorType.Gameboy: tpgCoprocessor.Text = "Gameboy"; break;
@@ -862,7 +861,7 @@ namespace Mesen.GUI.Debugger
 			List<RegEntry> entries = new List<RegEntry>() {
 				new RegEntry("", "Memory banks for GSU opcode/data accesses", null),
 				new RegEntry("$3033", "BRAMR - Back-up RAM Register", regs.BackupRamEnabled ? "Enable" : "Disable/Protect"),
-                new RegEntry("$3034", "PBR - Program Bank Register", regs.ProgramBank, Format.X8),
+				new RegEntry("$3034", "PBR - Program Bank Register", regs.ProgramBank, Format.X8),
 				new RegEntry("$3036", "ROMBR - Game Pak ROM Bank Register", regs.RomBank, Format.X8),
 				new RegEntry("$303C", "RAMBR - Game Pak RAM Bank Register", regs.RamBank, Format.X8),
 
@@ -909,7 +908,7 @@ namespace Mesen.GUI.Debugger
 		}
 
 		private string GetScreenHeight(byte screenHeight)
-        {
+		{
 			switch(screenHeight)
             {
 				case 0: return "128 pixels";
