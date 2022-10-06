@@ -49,8 +49,35 @@ namespace Mesen.GUI.Forms
 				InitCheatList();
 				UpdateMenuItems();
 				chkDisableCheats.Checked = ConfigManager.Config.Cheats.DisableAllCheats;
+
+				ctrlCheatFinder.OnAddCheat += CtrlCheatFinder_OnAddCheat;
+
 				RestoreLocation(ConfigManager.Config.Cheats.WindowLocation, ConfigManager.Config.Cheats.WindowSize);
 			}
+		}
+
+		private void tabMain_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			ctrlCheatFinder.TabIsFocused = (tabMain.SelectedTab == tpgCheatFinder);
+		}
+
+		protected override void OnActivated(EventArgs e)
+		{
+			if(tabMain.SelectedTab == tpgCheatFinder) {
+				ctrlCheatFinder.TabIsFocused = true;
+			}
+			base.OnActivated(e);
+		}
+
+		protected override void OnDeactivate(EventArgs e)
+		{
+			ctrlCheatFinder.TabIsFocused = false;
+			base.OnDeactivate(e);
+		}
+
+		private void CtrlCheatFinder_OnAddCheat(object sender, EventArgs e)
+		{
+			AddCheats(new List<CheatCode>() { (CheatCode)sender });
 		}
 
 		private void InitCheatList()

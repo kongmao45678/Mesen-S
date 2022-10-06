@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mesen.GUI.Controls;
 using Mesen.GUI.Config;
-using System.Globalization;
 
 namespace Mesen.GUI.Debugger.Controls
 {
@@ -114,6 +108,15 @@ namespace Mesen.GUI.Debugger.Controls
 		private void ctrlTextbox_SelectedLineChanged(object sender, EventArgs e)
 		{
 			this.vScrollBar.Invalidate();
+		}
+
+		public event EventHandler SelectedLineChanged {
+			add {
+				this.ctrlTextbox.SelectedLineChanged += value;
+			}
+			remove {
+				this.ctrlTextbox.SelectedLineChanged -= value;
+			}
 		}
 
 		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
