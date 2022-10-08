@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections;
 using Mesen.GUI.Controls;
 using Mesen.GUI.Config;
 using Mesen.GUI.Forms;
@@ -222,7 +217,6 @@ namespace Mesen.GUI.Debugger.Controls
 		private void mnuDelete_Click(object sender, EventArgs e)
 		{
 			if(lstLabels.SelectedIndices.Count > 0) {
-				int topIndex = lstLabels.TopItem.Index;
 				int lastSelectedIndex = lstLabels.SelectedIndices[lstLabels.SelectedIndices.Count - 1];
 				List<int> selectedIndexes = new List<int>(lstLabels.SelectedIndices.Cast<int>().ToList());
 				for(int i = selectedIndexes.Count - 1; i >= 0; i--) {
@@ -230,10 +224,7 @@ namespace Mesen.GUI.Debugger.Controls
 					LabelManager.DeleteLabel(label, i == 0);
 				}
 				
-				//Reposition scroll bar and selected/focused item
-				if(lstLabels.Items.Count > topIndex) {
-					lstLabels.TopItem = lstLabels.Items[topIndex];
-				}
+				//Reposition selected/focused item
 				if(lastSelectedIndex < lstLabels.Items.Count) {
 					lstLabels.Items[lastSelectedIndex].Selected = true;
 				} else if(lstLabels.Items.Count > 0) {

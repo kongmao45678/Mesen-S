@@ -1,4 +1,5 @@
 ﻿using Mesen.GUI.Controls;
+
 namespace Mesen.GUI.Forms
 {
 	partial class frmCheatList
@@ -25,6 +26,9 @@ namespace Mesen.GUI.Forms
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
+		///
+		/// Despite warnings, this method was changed manually :),
+		/// get rekt Designer.
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -44,6 +48,8 @@ namespace Mesen.GUI.Forms
 			this.btnAddCheat = new System.Windows.Forms.ToolStripButton();
 			this.btnEditCheat = new System.Windows.Forms.ToolStripButton();
 			this.btnDeleteCheat = new System.Windows.Forms.ToolStripButton();
+			this.tpgCheatFinder = new System.Windows.Forms.TabPage();
+			this.ctrlCheatFinder = new ctrlCheatFinder();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.chkDisableCheats = new System.Windows.Forms.CheckBox();
 			this.btnImportFromDb = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +59,7 @@ namespace Mesen.GUI.Forms
 			this.tableLayoutPanel1.SuspendLayout();
 			this.contextMenuCheats.SuspendLayout();
 			this.tsCheatActions.SuspendLayout();
+			this.tpgCheatFinder.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -67,12 +74,14 @@ namespace Mesen.GUI.Forms
 			// tabMain
 			// 
 			this.tabMain.Controls.Add(this.tabCheats);
+			this.tabMain.Controls.Add(this.tpgCheatFinder);
 			this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabMain.Location = new System.Drawing.Point(0, 0);
 			this.tabMain.Margin = new System.Windows.Forms.Padding(0);
 			this.tabMain.Name = "tabMain";
 			this.tabMain.SelectedIndex = 0;
 			this.tabMain.Size = new System.Drawing.Size(446, 324);
+			this.tabMain.SelectedIndexChanged += tabMain_SelectedIndexChanged;
 			this.tabMain.TabIndex = 0;
 			// 
 			// tabCheats
@@ -218,6 +227,25 @@ namespace Mesen.GUI.Forms
 			this.btnDeleteCheat.Size = new System.Drawing.Size(60, 20);
 			this.btnDeleteCheat.Text = "Delete";
 			this.btnDeleteCheat.Click += new System.EventHandler(this.btnDeleteCheat_Click);
+			//
+			// tpgCheatFinder
+			//
+			this.tpgCheatFinder.Controls.Add(this.ctrlCheatFinder);
+			this.tpgCheatFinder.Location = new System.Drawing.Point(4, 22);
+			this.tpgCheatFinder.Name = "tpgCheatFinder";
+			this.tpgCheatFinder.Padding = new System.Windows.Forms.Padding(3);
+			this.tpgCheatFinder.Size = new System.Drawing.Size(608, 230);
+			this.tpgCheatFinder.TabIndex = 1;
+			this.tpgCheatFinder.Text = "Cheat Finder";
+			this.tpgCheatFinder.UseVisualStyleBackColor = true;
+			//
+			// ctrlCheatFinder
+			//
+			this.ctrlCheatFinder.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.ctrlCheatFinder.Location = new System.Drawing.Point(3, 3);
+			this.ctrlCheatFinder.Name = "ctrlCheatFinder";
+			this.ctrlCheatFinder.Size = new System.Drawing.Size(602, 224);
+			this.ctrlCheatFinder.TabIndex = 0;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -275,6 +303,7 @@ namespace Mesen.GUI.Forms
 			this.contextMenuCheats.ResumeLayout(false);
 			this.tsCheatActions.ResumeLayout(false);
 			this.tsCheatActions.PerformLayout();
+			this.tpgCheatFinder.ResumeLayout(false);
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -301,5 +330,7 @@ namespace Mesen.GUI.Forms
 		private System.Windows.Forms.ToolStripButton btnDeleteCheat;
 		private System.Windows.Forms.ColumnHeader colEnabled;
 		private System.Windows.Forms.ToolStripButton btnImportFromDb;
+		private System.Windows.Forms.TabPage tpgCheatFinder;
+		private ctrlCheatFinder ctrlCheatFinder;
 	}
 }
