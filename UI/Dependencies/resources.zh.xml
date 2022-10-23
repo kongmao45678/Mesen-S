@@ -196,6 +196,7 @@
 			<Control ID="chkShowFps">显示 FPS</Control>
 			<Control ID="chkUseHdPacks">使用 HDNes 高清包</Control>
 			<Control ID="chkUseExclusiveFullscreen">使用独占全屏模式</Control>
+			<Control ID="lblFullscreenResolution">全屏分辨率:</Control>
 			<Control ID="lblRequestedRefreshRate">请求的刷新率：</Control>
 			<Control ID="tpgOverscan">过扫描</Control>
 			<Control ID="tpgOverscanGlobal">全球的</Control>
