@@ -25,7 +25,7 @@ The latest version is available from the [releases tab on GitHub](https://github
 
 ### Arch Linux
 
-Packages are available here: <https://aur.archlinux.org/packages/mesen-s-git/>
+Packages are available here: <https://aur.archlinux.org/packages/mesen-sx-git/>
 
 ## Compiling
 
